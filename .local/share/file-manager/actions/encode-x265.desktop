@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Action
+Name=Encode H.265
+ExecutionMode=Terminal
+Profiles=x265
+
+[X-Action-Profile x265]
+Exec=sakura -e "ffmpeg -i %f -c:v libx265 -crf 28 -c:a aac -b:a 128k x265-%f"
+MimeTypes=video/*;

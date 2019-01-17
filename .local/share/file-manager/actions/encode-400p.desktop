@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Action
+Name=Encode 400p
+ExecutionMode=Terminal
+Profiles=400p
+
+[X-Action-Profile 400p]
+Exec=sakura -e "mpv %F -o %F.mp4 -profile enc-to-400p"
+MimeTypes=video/*;

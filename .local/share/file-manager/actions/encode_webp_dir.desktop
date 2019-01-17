@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Action
+Description[fr]=Encode jpeg -> webp
+Name=Encode to webp
+Profiles=profile-zero;
+MimeTypes=inode/directory;
+
+[X-Action-Profile profile-zero]
+Exec=encode_webp.sh -d %f
+Name[fr_FR]=Profil par défaut
+Name[fr]=Profil par défaut

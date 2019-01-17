@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Action
+Name=Encode tablet
+ExecutionMode=Terminal
+Profiles=tablet
+
+[X-Action-Profile tablet]
+Exec=sakura -e "mpv %F -o %F.mp4 -profile enc-to-tablet"
+MimeTypes=video/*;

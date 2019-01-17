@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Action
+Name=Restore files
+Name[fr]=Restaurer les fichiers
+MimeType=all/allfiles;
+TryExec=/usr/bin/deja-dup
+Profiles=restore;
+
+
+[X-Action-Profile restore]
+Exec=deja-dup --restore %F

@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Menu
+Name=Sauvegarde
+Icon=deja-dup
+ItemsList=deja-dup-restore;deja-dup-restore-missing;
+

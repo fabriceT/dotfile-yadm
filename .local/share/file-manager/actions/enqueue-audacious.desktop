@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Action
+Icon=audacious
+Name=File d'attente Audacious
+Profiles=audacious;
+TargetLocation=true
+TargetToolbar=true
+
+[X-Action-Profile audacious]
+Exec=audacious --enqueue %F
+TryExec=audacious
+MimeTypes=audio/*;inode/directory;
+
+

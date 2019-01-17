@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Action
+Name=Encode noscale
+ExecutionMode=Terminal
+Profiles=480p
+
+[X-Action-Profile 480p]
+Exec=sakura -e "mpv %F -o %F.mp4 -profile enc-to-iphone-noscale"
+MimeTypes=video/*;

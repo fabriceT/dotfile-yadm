@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Action
+Name=Restore missing files
+Name[fr]=Restaurer les fichiers manquants
+TryExec=/usr/bin/deja-dup
+MimeType=all/allfiles;
+Profiles=restore_missing;
+
+[X-Action-Profile restore_missing]
+Exec=deja-dup --restore-missing %F

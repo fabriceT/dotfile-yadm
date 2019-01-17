@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Action
+Name=Send by mail
+Name[fr]=Envoyer par mail
+TryExec=/usr/bin/sylpheed
+Icon=sylpheed
+MimeType=all/allfiles;
+Profiles=on_files;
+
+[X-Action-Profile on_files]
+Exec=sylpheed --attach %F

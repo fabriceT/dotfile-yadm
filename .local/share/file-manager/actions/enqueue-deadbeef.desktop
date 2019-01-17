@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Action
+Name=File d'attente Deadbeef
+Icon=deadbeef
+Profiles=deadbeef;
+
+[X-Action-Profile deadbeef]
+Exec=deadbeef --queue %F
+MimeTypes=audio/*;inode/directory;

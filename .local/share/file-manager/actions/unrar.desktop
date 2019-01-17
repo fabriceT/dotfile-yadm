@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Action
+Icon=application-x-rar
+Name=Extraire avec unrar
+Profiles=unrar;
+TryExec=unrar
+MimeTypes=application/x-rar;
+
+[X-Action-Profile unrar]
+Exec=unrar x  %F

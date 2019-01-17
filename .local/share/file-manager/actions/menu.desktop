@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Menu
+Name=Musiques et mail.
+Icon=gtk-justify-right
+ItemsList=mail;enqueue-audacious;enqueue-deadbeef;
+

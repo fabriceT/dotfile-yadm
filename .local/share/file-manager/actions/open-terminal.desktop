@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Action
+Description[fr]=Open Terminal
+Name=Open terminal
+Profiles=profile-zero;
+MimeTypes=inode/directory;
+
+[X-Action-Profile profile-zero]
+Exec=sakura -d %f
+Name[fr_FR]=Profil par défaut
+Name[fr]=Profil par défaut

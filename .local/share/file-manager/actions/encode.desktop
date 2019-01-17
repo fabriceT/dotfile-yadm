@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Menu
+Name=Encodage
+Icon=mpv
+ItemsList=encode-400p;encode-480p;encode-noscale;encode-tablet;
+Name[fr_FR]=Encodage
+Name[fr]=Encodage
+Icon[fr_FR]=mpv
+Icon[fr]=mpv
