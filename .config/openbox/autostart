@@ -1,0 +1,49 @@
+#!/bin/sh
+# This shell script is run before Openbox launches.
+
+xsetroot -solid black -cursor_name left_ptr &
+
+MACROMEDIA_DIR=$HOME/.macromedia
+MACROMEDIA_TMPDIR=/tmp/.macromedia-$LOGNAME
+ADOBE_DIR=$HOME/.adobe
+ADOBE_TMPDIR=/tmp/.adobe-$LOGNAME
+
+[ ! -d $MACROMEDIA_TMPDIR ] && mkdir $MACROMEDIA_TMPDIR
+[ ! -h $MACROMEDIA_DIR ]    && ln -fs $MACROMEDIA_TMPDIR $MACROMEDIA_DIR
+[ ! -d $ADOBE_TMPDIR ]      && mkdir $ADOBE_TMPDIR
+[ ! -h $ADOBE_DIR ]         && ln -fs $ADOBE_TMPDIR $ADOBE_DIR
+
+#xdg-autostart &
+
+if [ $EUID -ne 0 ] ; then
+    envfile="$HOME/.gnupg/gpg-agent.env"
+    if [[ -e "$envfile" ]] && kill -0 $(grep GPG_AGENT_INFO "$envfile" | cut -d: -f 2) 2>/dev/null; then
+        eval "$(cat "$envfile")"
+    else
+        eval "$(gpg-agent --daemon --enable-ssh-support --write-env-file "$envfile")"
+    fi
+    export GPG_AGENT_INFO  # the env file does not contain the export statement
+    export SSH_AUTH_SOCK   # enable gpg-agent for ssh
+fi
+
+
+#icônes du bureau
+# pcmanfm -d &
+
+# STFU, beeper
+#xset b off
+
+# on éteint l'écran après 10mn d'inactivité
+#xset dpms 0 1400 1800 &
+
+#~/.local/bin/xsnow.sh restore
+#~/.local/bin/xcompmgr.sh restore
+
+#lua ~/.local/bin/wget_ua.lua
+
+sh ~/.config/openbox/cleanup.sh
+
+(sleep 10s; lua ~/.local/bin/actif-dps.lua)
+
+# Set compose key as PrintScreen (lenovo keyboard)
+#setxkbmap -option compose:prsc

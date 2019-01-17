@@ -1,0 +1,13 @@
+# robodoc --src .  --doc doc --singledoc --html
+
+options:
+ --index
+ --toc
+header markers:
+	*****
+remark markers:
+	*
+end markers:
+	*****
+accept files:
+    *.lua

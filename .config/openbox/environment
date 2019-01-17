@@ -1,0 +1,17 @@
+export XDG_MENU_PREFIX=lxde-
+export BROWSER=firefox
+export OOO_FORCE_DESKTOP=gnome
+
+#export LUA_CPATH="./?.so;/usr/lib/lua/5.3/?.so;$HOME/.local/share/lib/lua/?.so"
+#export LUA_PATH="./?.lua;/usr/share/lua/5.3/?.lua;$HOME/.local/share/lib/lua/?.lua"
+
+#export XMODIFIERS=@im=none
+#export GTK_IM_MODULE=xim
+
+# Console related
+export TERM=sakura
+export EDITOR=le
+export PAGER=most
+
+# Java look'n'feel
+# export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
