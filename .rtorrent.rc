@@ -1,0 +1,41 @@
+max_uploads = 5
+download_rate = 440
+upload_rate = 10
+
+min_peers = 10
+max_peers = 70
+
+min_peers_seed = 3
+max_peers_seed = 8
+
+#scgi_local = ~/.torrents/rpc.socket
+#scgi_port = :5000
+
+session = ~/.cache/rtorrent
+#schedule = watch_directory,5,5,load_start=~/.torrents/*.torrent
+schedule = watch_directory,5,5,"load_start=~/.config/transmission/torrents/*.torrent,d.set_directory=~/Téléchargements/P2P/"
+#schedule = watch_directory_2,5,5,"load_start=~/.torrents/images/*.torrent,d.set_directory=~/Téléchargements/P2P/Images/"
+#schedule = watch_directory_3,5,5,"load_start=~/.torrents/iso/*.torrent,d.set_directory=~/Téléchargements/P2P/ISO/"
+#schedule = watch_directory_4,5,5,"load_start=~/.torrents/musiques/*.torrent,d.set_directory=~/Téléchargements/P2P/Musiques/"
+#schedule = watch_directory_5,5,5,"load_start=~/.torrents/private/*.torrent,d.set_directory=~/Documents/Privé/P2P/"
+schedule = untied_directory,5,5,stop_untied=
+
+# system.method.set_key =event.download.finished,move_complete,"d.set_directory=$d.get_custom1= ;execute=mv,-u,$d.get_base_path=,$d.get_custom1="
+
+system.method.set_key = event.download.finished,notify_me,"execute=dunstify,$d.get_name="
+directory = /home/phab/Téléchargements/P2P
+
+ip = 169.247.209.60
+port_range = 9444-9445
+port_random = yes
+
+use_udp_trackers = yes
+encryption = allow_incoming,enable_retry,prefer_plaintext
+#encryption = allow_incoming,try_outgoing,enable_retry
+
+dht = auto
+dht_port = 9445
+peer_exchange = yes
+
+#done_fg_color = 6
+#active_fg_color = 7
