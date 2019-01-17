@@ -1,0 +1,11 @@
+[Privé]
+dir=~/.docs
+mount=~/Documents/Privé
+
+[Test]
+dir=~/.docs2
+mount=~/Documents/Test
+
+[save500]
+dir=/run/media/phab/backup500/data
+mount=~/Documents/Data
