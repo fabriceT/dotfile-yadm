@@ -1,0 +1,7 @@
+[Unit]
+Description=Clean cache directory
+
+[Service]
+Type=oneshot
+Nice=19
+ExecStart=/home/phab/.local/bin/cleanup.sh
