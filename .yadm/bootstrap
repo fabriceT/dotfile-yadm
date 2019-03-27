@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Installation paquets utiles
-pacman -S otf-fira-mono otf-fira-code fish
+sudo pacman -S otf-fira-mono otf-fira-code fish adapta-gtk-theme arc-gtk-theme
 
 
 # Maintenance
