@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Installation paquets utiles
+pacman -S otf-fira-mono otf-fira-code fish
