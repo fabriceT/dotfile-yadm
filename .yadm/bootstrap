@@ -2,3 +2,7 @@
 
 # Installation paquets utiles
 pacman -S otf-fira-mono otf-fira-code fish
+
+
+# Maintenance
+systemctl --user enable systemd-tmpfiles-setup.service systemd-tmpfiles-clean.timer
