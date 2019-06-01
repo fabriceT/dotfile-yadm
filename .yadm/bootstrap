@@ -1,15 +1,16 @@
 #!/bin/bash
 
-GNOME_VM_DCONF="~/.config/gnome-vm.dconf"
+GNOME_VM_DCONF="${HOME}/.config/gnome-vm.dconf"
 
 # Installation paquets utiles
 if [[ -x /usr/bin/pacman ]]; then
 	echo "Installation des paquet"
-	sudo pacman -S otf-fira-mono otf-fira-code fish adapta-gtk-theme arc-gtk-theme
+#	sudo pacman -S otf-fira-mono otf-fira-code fish adapta-gtk-theme arc-gtk-theme
 fi
 
-if [[ -f ${GNOME_VM_DCONF} ]]; then
-	dconf load < ${GNOME_VM_DCONF}
+if [[ -e ${GNOME_VM_DCONF} ]]; then
+	echo "Paramétrage de gnome VM"
+	dconf load /org/gnome/desktop/wm/keybindings/ < ${GNOME_VM_DCONF}
 fi
 
 # Maintenance
