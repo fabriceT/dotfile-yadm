@@ -1,8 +1,16 @@
 #!/bin/bash
 
-# Installation paquets utiles
-sudo pacman -S otf-fira-mono otf-fira-code fish adapta-gtk-theme arc-gtk-theme
+GNOME_VM_DCONF="~/.config/gnome-vm.dconf"
 
+# Installation paquets utiles
+if [[ -x /usr/bin/pacman ]]; then
+	echo "Installation des paquet"
+	sudo pacman -S otf-fira-mono otf-fira-code fish adapta-gtk-theme arc-gtk-theme
+fi
+
+if [[ -f ${GNOME_VM_DCONF} ]]; then
+	dconf load < ${GNOME_VM_DCONF}
+fi
 
 # Maintenance
 systemctl --user enable systemd-tmpfiles-setup.service systemd-tmpfiles-clean.timer
