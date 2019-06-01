@@ -1,17 +1,21 @@
 #!/bin/bash
 
-GNOME_VM_DCONF="${HOME}/.config/gnome-vm.dconf"
-
-# Installation paquets utiles
+# Installation paquets utiles sur arch
 if [[ -x /usr/bin/pacman ]]; then
 	echo "Installation des paquet"
-#	sudo pacman -S otf-fira-mono otf-fira-code fish adapta-gtk-theme arc-gtk-theme
+	sudo pacman -S otf-fira-mono otf-fira-code fish adapta-gtk-theme arc-gtk-theme
 fi
 
-if [[ -e ${GNOME_VM_DCONF} ]]; then
-	echo "Paramétrage de gnome VM"
-	dconf load /org/gnome/desktop/wm/keybindings/ < ${GNOME_VM_DCONF}
-fi
+echo "Paramètrage de l'environnement via dconf"
+for conf in `ls ${HOME}/.config/dconf/settings/*.dconf`; do
+	# This is fugly!!!
+	basename=$(basename ${conf})
+	filename="${basename%.*}"
+	path=$(echo ${filename} | sed -e 's/\./\//g')
+
+	echo "  * injection '${conf}' dans '/${path}/' "
+	dconf load /${path}/ < ${conf} 
+done
 
 # Maintenance
 systemctl --user enable systemd-tmpfiles-setup.service systemd-tmpfiles-clean.timer
