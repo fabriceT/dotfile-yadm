@@ -1,0 +1,11 @@
+[Unit]
+Description=Backup Random Wallpaper fetched files.
+
+[Timer]
+OnCalendar=1h
+RandomizedDelaySec=5m
+Persistent=true
+Unit=backup-wallpappers.service
+
+[Install]
+WantedBy=timers.target
