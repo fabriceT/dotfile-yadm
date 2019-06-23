@@ -2,9 +2,9 @@
 Description=Backup Random Wallpaper fetched files.
 
 [Timer]
-OnCalendar=1h
-RandomizedDelaySec=5m
-Persistent=true
+OnCalendar=hourly
+OnBootSec=5min
+RandomizedDelaySec=5min
 Unit=backup-wallpappers.service
 
 [Install]
