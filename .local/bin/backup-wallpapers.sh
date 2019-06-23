@@ -1,7 +1,7 @@
 #!/bin/bash
 
-SOURCE=${HOME}/.local/share/gnome-shell/extensions/randomwallpaper@iflow.space/wallpapers
-DEST=${HOME}/Images/wallpapers
+SOURCE=${HOME}/.local/share/gnome-shell/extensions/randomwallpaper@iflow.space/wallpapers/
+DEST=${HOME}/Images/Wallpapers/
 
 if [[ ! -d ${SOURCE} ]]; then
 	echo "Nothing to do!"
