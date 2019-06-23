@@ -1,0 +1,25 @@
+#!/bin/lua
+
+function pragha()
+	local handle = io.popen("pragha -c")
+	local content = handle:read("*a")
+	handle:close()
+	return content
+end
+
+
+output = pragha()
+
+
+p = string.find(output, "state")
+
+if (p) then
+    file_pos = string.find(output, "file:")
+    title_pos = string.find(output, "title:")
+    filename =  string.sub(output, file_pos + 6, title_pos - 2)
+    print("Saving ".. filename)
+    os.execute("cp '" .. filename .. "' ~/Musiques/Save/")
+    os.execute("pragha -n")
+end
+
+
