@@ -1,0 +1,15 @@
+[Unit]
+Description=Cleaning up user cache files
+RefuseManualStart=no
+RefuseManualStop=no
+
+[Timer]
+OnCalendar=weekly
+OnBootSec=1h
+AccuracySec=1m
+RandomizedDelaySec=25m
+Persistent=true
+Unit=cache_clean.service
+
+[Install]
+WantedBy=timers.target

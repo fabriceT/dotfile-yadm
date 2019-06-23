@@ -1,0 +1,6 @@
+[Unit]
+Description=Backup Random Wallpaper fetched files.
+
+[Service]
+Type=simple
+ExecStart=/home/phab/.local/bin/backup-wallpapers.sh

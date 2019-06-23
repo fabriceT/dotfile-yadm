@@ -18,4 +18,7 @@ for conf in `ls ${HOME}/.config/dconf/settings/*.dconf`; do
 done
 
 # Maintenance
+
 systemctl --user enable systemd-tmpfiles-setup.service systemd-tmpfiles-clean.timer
+systemctl --user enable --now backup-wallpapers.timer
+systemctl --user enable --now cache_clean.timer
