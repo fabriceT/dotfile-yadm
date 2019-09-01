@@ -35,7 +35,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #exec swayidle \
 #    timeout 300 'swaylock -c 000000' \
 #    timeout 600 'swaymsg "output * dpms off"' \
-#       resume 'swaymsg "output * dpms on"' \
+#    resume 'swaymsg "output * dpms on"' \
 #    before-sleep 'swaylock -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -91,6 +91,7 @@ input * {
 
     # exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
 #
 # Moving around:
 #
@@ -101,25 +102,28 @@ input * {
     bindsym $mod+Right  focus right
 
     # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+Left move left
-    bindsym $mod+Shift+Down move down
-    bindsym $mod+Shift+Up move up
+    bindsym $mod+Shift+Left  move left
+    bindsym $mod+Shift+Down  move down
+    bindsym $mod+Shift+Up    move up
     bindsym $mod+Shift+Right move right
+
 #
 # Workspaces:
 #
-    bindsym $mod+Control+Right workspace next
-    bindsym $mod+Control+Left workspace prev
+    bindsym $mod+Control+Right     workspace next
+    bindsym $mod+Control+Left      workspace prev
+    bindsym $mod+Control+Backspace workspace back_and_forth
 
     set $wp1 "mail:"
     set $wp2 "internet:"
     set $wp3 "dev:"
+    set $wp4 "sys:"
 
     # switch to workspace
     bindsym $mod+1 workspace $wp1
     bindsym $mod+2 workspace $wp2
     bindsym $mod+3 workspace $wp3
-    bindsym $mod+4 workspace 4
+    bindsym $mod+4 workspace $wp4
     bindsym $mod+5 workspace 5
     bindsym $mod+6 workspace 6
     bindsym $mod+7 workspace 7
@@ -142,7 +146,7 @@ input * {
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
-    bindsym $mod+f fullscreen
+    # bindsym $mod+f fullscreen
     bindsym F11 fullscreen
 
     # Toggle the current focus between tiling and floating mode
@@ -153,6 +157,16 @@ input * {
 
     # move focus to the parent container
     bindsym $mod+a focus parent
+
+#
+# Decoration
+#
+    # use window title, but no border
+    bindsym $mod+t border normal 0
+    # use no window title and a border
+    bindsym $mod+y border pixel 1
+    # use neither window title nor border
+    bindsym $mod+u border none
 
 #
 # Scratchpad:
@@ -186,18 +200,30 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-mode "move" {
-    bindsym 1 move container to workspace $wp1
-    bindsym 2 move container to workspace $wp2
-    bindsym 3 move container to workspace $wp3
+#
+# Moving container
+#
+#mode "move" {
+#    bindsym 1 move container to workspace $wp1
+#    bindsym 2 move container to workspace $wp2
+#    bindsym 3 move container to workspace $wp3
+#    bindsym 4 move container to workspace $wp4
+#
+#    # return to default mode
+#    bindsym Return mode "default"
+#    bindsym Escape mode "default"
+#}
+#bindsym $mod+m mode "move"
 
-    # return to default mode
+
+mode "split" {
+    bindsym Up splith
+    bindsym Down splitv
+    bindsym Escape splitt
+
     bindsym Return mode "default"
-    bindsym Escape mode "default"
 }
-bindsym $mod+m mode "move"
-
-
+bindsym $mod+Shift+S mode "split"
 
 #
 # Status Bar:
@@ -208,8 +234,8 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %l:%M %p'; do sleep 30s; done
-
+    status_command while date +'⏲  %Y-%m-%d %l:%M %p'; do sleep 30s; done
+   
     colors {
         statusline #ffffff
         background #323232
@@ -217,17 +243,17 @@ bar {
     }
 }
 
-#bar {
-#	tray_output primary
-#}
-
 #
 # Applications
 # 
 
 #assign [class="vivaldi-stable"] 4
 assign [class="Code"] $wp3
+assign [class="firefox"] $wp2
+assign [app_id="sakura"] $wp4
 
+for_window [title="bite"] title_format "<b>%title %class</b> (%app_id)"
 
 # Sexy things
-include /etc/sway/config.d/*
+include $HOME/.config/sway/config.d/*
+#include ~/config/sway/config.d/*
