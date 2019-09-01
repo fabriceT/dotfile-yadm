@@ -1,0 +1,15 @@
+#
+# Moving container
+#
+mode "move" {
+    bindsym 1 move container to workspace $wp1
+    bindsym 2 move container to workspace $wp2
+    bindsym 3 move container to workspace $wp3
+    bindsym 4 move container to workspace $wp4
+
+    # return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+m mode "move"
+
