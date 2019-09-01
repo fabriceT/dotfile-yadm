@@ -1,5 +1,3 @@
-@import url('/home/phab/.local/share/gnome-shell/extensions/no-title-bar@franglais125.gmail.com/stylesheet.css');
-@import url('/home/phab/.local/share/gnome-shell/extensions/no-title-bar@franglais125.gmail.com/stylesheet-tiled.css');
 /* shrink headerbars (don't forget semicolons after each property) */
 headerbar {
     min-height: 10px;
