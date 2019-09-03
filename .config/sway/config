@@ -9,18 +9,31 @@
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 
-# Your preferred terminal emulator
+# Your preferred applications
 set $term sakura
+set $browser firefox
+set $mediaplayer pragha
+set $editor /opt/visual-studio-code/bin/code
 
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
 set $menu dmenu_path | bemenu | xargs swaymsg exec
 
+# workspaces
+set $wp1 "mail:"
+set $wp2 "internet:"
+set $wp3 "dev:"
+set $wp4 "sys:"
+set $wp5 "media:"
+
+
 ### Output configuration
-font pango:Liberation Mono 11px
+font pango:Fira Mono 11px
+
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+
 #
 # Example configuration:
 #
@@ -64,9 +77,11 @@ input * {
 # Read `man 5 sway-input` for more information about this section.
 
 ### Key bindings
+
 #
 # Basics:
 #
+
     # start a terminal
     bindsym $mod+Return exec $term
 
@@ -90,46 +105,7 @@ input * {
     bindsym $mod+l exec swaylock -c 000000
 
     # exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
-
-#
-# Moving around:
-#
-    # Move your focus around
-    bindsym $mod+Left   focus left
-    bindsym $mod+Down   focus down
-    bindsym $mod+Up     focus up
-    bindsym $mod+Right  focus right
-
-    # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+Left  move left
-    bindsym $mod+Shift+Down  move down
-    bindsym $mod+Shift+Up    move up
-    bindsym $mod+Shift+Right move right
-
-#
-# Workspaces:
-#
-    bindsym $mod+Control+Right     workspace next
-    bindsym $mod+Control+Left      workspace prev
-    bindsym $mod+Control+Backspace workspace back_and_forth
-
-    set $wp1 "mail:"
-    set $wp2 "internet:"
-    set $wp3 "dev:"
-    set $wp4 "sys:"
-
-    # switch to workspace
-    bindsym $mod+1 workspace $wp1
-    bindsym $mod+2 workspace $wp2
-    bindsym $mod+3 workspace $wp3
-    bindsym $mod+4 workspace $wp4
-    bindsym $mod+5 workspace 5
-    bindsym $mod+6 workspace 6
-    bindsym $mod+7 workspace 7
-    bindsym $mod+8 workspace 8
-    bindsym $mod+9 workspace 9
-    bindsym $mod+0 workspace 10
+    bindsym $mod+Shift+x exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 
 #
 # Layout stuff:
@@ -143,7 +119,7 @@ input * {
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    bindsym $mod+e layout toggle all
 
     # Make the current focus fullscreen
     # bindsym $mod+f fullscreen
@@ -169,6 +145,79 @@ input * {
     bindsym $mod+u border none
 
 #
+# Workspaces:
+#
+
+    bindsym $mod+Control+Right     workspace next
+    bindsym $mod+Control+Left      workspace prev
+    bindsym $mod+Control+Backspace workspace back_and_forth
+
+    # switch to workspace
+    bindsym $mod+1 workspace $wp1
+    bindsym $mod+2 workspace $wp2
+    bindsym $mod+3 workspace $wp3
+    bindsym $mod+4 workspace $wp4
+    bindsym $mod+5 workspace $wp5
+    bindsym $mod+6 workspace 6
+    bindsym $mod+7 workspace 7
+    bindsym $mod+8 workspace 8
+    bindsym $mod+9 workspace 9
+    bindsym $mod+0 workspace 10
+
+#
+# Moving around:
+#
+
+    # Move your focus around
+    bindsym $mod+Left   focus left
+    bindsym $mod+Down   focus down
+    bindsym $mod+Up     focus up
+    bindsym $mod+Right  focus right
+
+    # Move the focused window with the same, but add Shift
+    bindsym $mod+Shift+Left  move left
+    bindsym $mod+Shift+Down  move down
+    bindsym $mod+Shift+Up    move up
+    bindsym $mod+Shift+Right move right
+
+#
+# Moving container
+#
+
+    mode "move" {
+        bindsym 1 move container to workspace $wp1
+        bindsym 2 move container to workspace $wp2
+        bindsym 3 move container to workspace $wp3
+        bindsym 4 move container to workspace $wp4
+        bindsym 5 move container to workspace $wp5
+
+        # return to default mode
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+    }
+    bindsym $mod+m mode "move"
+
+#
+# Resizing containers:
+#
+
+    mode "resize" {
+        # left will shrink the containers width
+        # right will grow the containers width
+        # up will shrink the containers height
+        # down will grow the containers height
+        bindsym Left resize shrink width 10px
+        bindsym Down resize grow height 10px
+        bindsym Up resize shrink height 10px
+        bindsym Right resize grow width 10px
+
+        # return to default mode
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+    }
+    bindsym $mod+r mode "resize"
+
+#
 # Scratchpad:
 #
     # Sway has a "scratchpad", which is a bag of holding for windows.
@@ -182,48 +231,41 @@ input * {
     bindsym $mod+minus scratchpad show
 
 #
-# Resizing containers:
+# Applications
+# 
+
+#assign [class="vivaldi-stable"] 4
+    assign [class="Code"] $wp3
+    assign [class="firefox"] $wp2
+    assign [app_id="sakura"] $wp4
+    assign [app_id="pragha"] $wp5
+
+    bindsym $mod+Shift+b exec $browser
+    bindsym $mod+Alt+b [class="firefox"] focus
+
+    bindsym $mod+Shift+e exec $editor
+    bindsym $mod+Alt+e [class="Code"] focus
+
+    bindsym $mod+Shift+m exec $mediaplayer
+    # no need to jump to $mediaplayer
+
+    # terminal start-up in main config file
+    bindsym $mod+Alt+t [app_id="sakura"] focus
+
+    for_window [title=".*"] title_format "<b>%title %class</b> (%app_id) - %class"
+
 #
-mode "resize" {
-    # left will shrink the containers width
-    # right will grow the containers width
-    # up will shrink the containers height
-    # down will grow the containers height
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
+# Audio
+# 
 
-    # return to default mode
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-bindsym $mod+r mode "resize"
-
-#
-# Moving container
-#
-#mode "move" {
-#    bindsym 1 move container to workspace $wp1
-#    bindsym 2 move container to workspace $wp2
-#    bindsym 3 move container to workspace $wp3
-#    bindsym 4 move container to workspace $wp4
-#
-#    # return to default mode
-#    bindsym Return mode "default"
-#    bindsym Escape mode "default"
-#}
-#bindsym $mod+m mode "move"
-
-
-mode "split" {
-    bindsym Up splith
-    bindsym Down splitv
-    bindsym Escape splitt
-
-    bindsym Return mode "default"
-}
-bindsym $mod+Shift+S mode "split"
+    # Pulse Audio controls
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') +5%
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') -5%
+    bindsym XF86AudioMute exec pactl set-sink-mute $(pacmd list-sinks |awk '/* index:/{print $3}') toggle
+    bindsym XF86AudioStop exec pragha --stop
+    bindsym XF86AudioPlay exec pragha --pause
+    bindsym XF86AudioPrev exec pragha --prev
+    bindsym XF86AudioNext exec pragha --next
 
 #
 # Status Bar:
@@ -243,17 +285,8 @@ bar {
     }
 }
 
-#
-# Applications
-# 
-
-#assign [class="vivaldi-stable"] 4
-assign [class="Code"] $wp3
-assign [class="firefox"] $wp2
-assign [app_id="sakura"] $wp4
-
-for_window [title="bite"] title_format "<b>%title %class</b> (%app_id)"
 
 # Sexy things
-include $HOME/.config/sway/config.d/*
-#include ~/config/sway/config.d/*
+
+include ~/config/sway/config.d/*
+#include $HOME/.config/sway/config.d/*
