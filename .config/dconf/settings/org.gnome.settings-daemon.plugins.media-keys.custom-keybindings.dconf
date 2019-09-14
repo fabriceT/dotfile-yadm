@@ -1,0 +1,9 @@
+[custom0]
+binding='<Shift><Super>f'
+command='firefox'
+name='Firefox'
+
+[custom1]
+binding='<Shift><Super>k'
+command='keepassxc'
+name='KeepassXC'
