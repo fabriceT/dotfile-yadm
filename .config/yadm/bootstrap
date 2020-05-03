@@ -1,24 +1,27 @@
 #!/bin/bash
 
-# Installation paquets utiles sur arch
+extra_packages="otf-fira-mono otf-fira-code fish adapta-gtk-theme arc-gtk-theme \
+syncthing chrome-gnome-shell"
+
+
+# System settings
 if [[ -x /usr/bin/pacman ]]; then
-	echo "Installation des paquet"
-	sudo pacman -S otf-fira-mono otf-fira-code fish adapta-gtk-theme arc-gtk-theme
-	sudo pacman -S syncthing chrome-gnome-shell
+	echo "Extra packages installation"
+	sudo pacman -S ${extra_packages}
 fi
 
-echo "Paramètrage de l'environnement via dconf"
+
+# User settings
+echo "Gnome setting via dconf"
 for conf in `ls ${HOME}/.config/dconf/settings/*.dconf`; do
 	# This is fugly!!!
 	basename=$(basename ${conf})
 	filename="${basename%.*}"
 	path=$(echo ${filename} | sed -e 's/\./\//g')
 
-	echo "  * injection '${conf}' dans '/${path}/' "
+	echo "  * injecting '${conf}' into '/${path}/' "
 	dconf load /${path}/ < ${conf} 
 done
-
-# Maintenance
 
 systemctl --user enable systemd-tmpfiles-setup.service systemd-tmpfiles-clean.timer
 systemctl --user enable --now backup-wallpapers.timer
