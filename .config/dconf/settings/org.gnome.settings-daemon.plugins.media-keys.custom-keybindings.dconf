@@ -7,13 +7,3 @@ name='Firefox'
 binding='<Shift><Super>k'
 command='keepassxc'
 name='KeepassXC'
-
-[custom2]
-binding='<Super>Return'
-command='sakura'
-name='Terminal'
-
-[custom3]
-binding='<Shift><Super>v'
-command='code'
-name='Visual Code'
