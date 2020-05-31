@@ -1,16 +1,5 @@
 #!/bin/bash
 
-extra_packages="otf-fira-mono otf-fira-code fish adapta-gtk-theme arc-gtk-theme \
-syncthing chrome-gnome-shell"
-
-
-# System settings
-if [[ -x /usr/bin/pacman ]]; then
-	echo "Extra packages installation"
-	sudo pacman -S ${extra_packages}
-fi
-
-
 # User settings
 ~/.config/dconf/settings/dconf_inject.sh
 
