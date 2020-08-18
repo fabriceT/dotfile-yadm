@@ -1,0 +1,17 @@
+[/]
+activate-by-key=uint32 1
+activate-immediately=true
+fade-enable=false
+font-size=uint32 32
+launcher-stats='{sakura.desktop:1,org.gnome.Weather.desktop:1,firefox.desktop:1,org.gnome.Recipes.desktop:1}'
+matching=uint32 1
+never-show-onboarding=true
+onboarding-1=uint32 1
+onboarding-2=uint32 1
+onboarding-3=uint32 1
+onboarding-4=uint32 1
+onboarding-5=uint32 1
+onboarding-6=uint32 1
+ordering=uint32 0
+show-switcher=['<Super>w']
+workspace-indicator=true

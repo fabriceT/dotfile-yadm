@@ -1,0 +1,8 @@
+[/]
+enable-active-window=true
+enable-intellihide=true
+hot-corner=false
+mouse-sensitive=true
+mouse-triggers-overview=false
+shortcut-keybind=['<Primary>space']
+shortcut-toggles=true
