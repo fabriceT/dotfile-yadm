@@ -1,2 +1,2 @@
 [/]
-application-list=['org.gnome.Evolution.desktop:4', 'rhythmbox.desktop:5', 'org.gnome.Builder.desktop:2', 'firefox.desktop:1', 'sakura.desktop:2']
+application-list=['org.gnome.Evolution.desktop:4', 'rhythmbox.desktop:5', 'org.gnome.Builder.desktop:2', 'firefox.desktop:1', 'sakura.desktop:2', 'code-oss.desktop:3']
