@@ -1,3 +1,8 @@
+[custom0]
+binding='<Super>Return'
+command='salura'
+name='sakura'
+
 [custom1]
 binding='<Shift><Super>k'
 command='keepassxc'

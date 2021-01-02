@@ -1,4 +1,5 @@
 [files]
+ignored-files=['*~', '#*#', 'autom4te', '*.aux', '*.class', 'confdefs.h', 'config.status', 'configure', 'confstat', 'conftest', '*.csproj', '*.desktop', '*.directory', '~$*.doc?', '~$*.dot?', '*.gmo', '*.in', '*.iso', '*.jar', '*.la', 'libtool', '*.lo', '*.loT', 'ltmain.sh', '*.lzo', '*.m4', 'Makefile', '*.nvram', '*.o', '*.omf', '*.orig', '*.part', '*.pc', '*.po', '~$*.pot?', '~$*.ppam', '~$*.ppsm', '~$*.ppsx', '~$*.ppt?', '*.rcore', '*.rej', 'SCCS', '*.tmp', '*.vm*', '*.vmdk', '~$*.vsd?', '~$*.vss?', '~$*.vst?', '~$*.xlam', '~$*.xls?', '~$*.xlt?']
 index-on-battery=false
 index-on-battery-first-time=false
 index-removable-devices=false
