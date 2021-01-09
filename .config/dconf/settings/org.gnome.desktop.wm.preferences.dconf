@@ -1,21 +1,3 @@
 [/]
-action-double-click-titlebar='toggle-maximize'
-action-middle-click-titlebar='toggle-shade'
-action-right-click-titlebar='menu'
-audible-bell=true
-auto-raise=true
-auto-raise-delay=500
-button-layout='appmenu:close'
-disable-workarounds=false
-focus-mode='click'
-focus-new-windows='smart'
-mouse-button-modifier='<Super>'
 num-workspaces=5
-raise-on-click=true
-resize-with-right-button=false
-theme='Adwaita'
-titlebar-font='Cantarell Bold Italic 10'
-titlebar-uses-system-font=true
-visual-bell=false
-visual-bell-type='fullscreen-flash'
 workspace-names=['cognos', 'Roubignolles', 'Tartos']

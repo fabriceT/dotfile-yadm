@@ -5,8 +5,8 @@ name='sakura'
 
 [custom1]
 binding='<Shift><Super>k'
-command='keepassxc'
-name='KeepassXC'
+command='/usr/bin/keepassxc'
+name='Keepass'
 
 [custom2]
 binding='<Super>Return'
