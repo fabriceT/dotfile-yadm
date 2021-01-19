@@ -4,7 +4,7 @@ abbr -a gco git commit -m
 abbr -a gst git status
 abbr -a gsw git switch
 abbr -a gpl git pull
-abbr -a gpu git push
+abbr -a gph git push
 
 # YADM
 abbr -a yck yadm checkout
