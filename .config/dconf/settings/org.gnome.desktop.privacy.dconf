@@ -1,7 +1,14 @@
 [/]
 disable-camera=true
-disable-microphone=true
+disable-microphone=false
+hide-identity=false
 old-files-age=uint32 5
 recent-files-max-age=7
+remember-app-usage=true
+remember-recent-files=true
 remove-old-temp-files=true
 remove-old-trash-files=true
+report-technical-problems=false
+send-software-usage-stats=false
+show-full-name-in-top-bar=true
+usb-protection=true
