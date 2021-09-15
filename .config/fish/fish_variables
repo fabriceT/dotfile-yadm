@@ -8,7 +8,7 @@ SETUVAR _fish_abbr_docker:podman
 SETUVAR _fish_abbr_docker_2D_compose:podman\x2dcompose
 SETUVAR _fish_abbr_gck:git\x20checkout
 SETUVAR _fish_abbr_gcm:git\x20commit\x20\x2dm
-SETUVAR _fish_abbr_gco:git\x20checkout
+SETUVAR _fish_abbr_gco:git\x20commit\x20\x2dm
 SETUVAR _fish_abbr_gi_2D_cm:git\x20commit
 SETUVAR _fish_abbr_gi_2D_co:git\x20checkout
 SETUVAR _fish_abbr_gi_2D_st:git\x20status
@@ -18,6 +18,7 @@ SETUVAR _fish_abbr_gitst:git\x20status
 SETUVAR _fish_abbr_gitsw:git\x20switch
 SETUVAR _fish_abbr_gobuild:go\x20build\x20\x2e
 SETUVAR _fish_abbr_gorun:go\x20run\x20\x2e
+SETUVAR _fish_abbr_gph:git\x20push
 SETUVAR _fish_abbr_gpl:git\x20pull
 SETUVAR _fish_abbr_gpu:git\x20push
 SETUVAR _fish_abbr_gpul:git\x20pull
