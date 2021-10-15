@@ -2,3 +2,4 @@
 .cozy-desktop/config.json
 .gitconfig
 .hgrc
+.imapfilter/config.lua
