@@ -1,20 +1,20 @@
 # GIT
-abbr -a gck git checkout
-abbr -a gco git commit -m 
-abbr -a gst git status
-abbr -a gsw git switch
-abbr -a gpl git pull
-abbr -a gph git push
+abbr -a gick git checkout
+abbr -a gico git commit -m 
+abbr -a gist git status
+abbr -a gisw git switch
+abbr -a gipl git pull
+abbr -a giph git push
 
 # YADM
-abbr -a yck yadm checkout
-abbr -a yco yadm commit -m 
-abbr -a yst yadm status
-abbr -a ypl yadm pull
-abbr -a yph yadm push
-abbr -a ybp yadm bootstrap
-abbr -a yec yadm encrypt
-abbr -a ydc yadm decrypt
+abbr -a yadck yadm checkout
+abbr -a yadco yadm commit -m 
+abbr -a yadst yadm status
+abbr -a yadpl yadm pull
+abbr -a yadph yadm push
+abbr -a yadbp yadm bootstrap
+abbr -a yadenc yadm encrypt
+abbr -a yaddec yadm decrypt
 
 # Just because...
 abbr -a docker podman
@@ -29,4 +29,3 @@ abbr -a systimers  systemctl list-timers
 
 
 abbr -a osquerya osqueryi  --nodisable_audit --nodisable_events --audit_allow_config=true --audit_persist=true --audit_allow_sockets --logger_plugin=filesystem --events_expiry=1
-
