@@ -1,19 +1,4 @@
 [custom0]
-binding='<Shift><Super>k'
-command='/usr/bin/keepassxc'
-name='Keepass'
-
-[custom1]
 binding='<Super>Return'
 command='/usr/bin/sakura'
-name='Sakura'
-
-[custom2]
-binding='<Shift><Super>f'
-command='/usr/bin/firefox'
-name='Firefox'
-
-[custom3]
-binding='<Shift><Super>e'
-command='/usr/bin/code'
-name='Code - Editor'
+name='Terminal'

@@ -1,5 +1,5 @@
 [/]
-activate-by-key=uint32 1
+activate-by-key=uint32 2
 activate-immediately=true
 fade-enable=false
 font-size=uint32 32
