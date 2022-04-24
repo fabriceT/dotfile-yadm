@@ -26,7 +26,10 @@ abbr -a sysdreload systemctl deamon-reload
 abbr -a sysstop    systemctl stop
 abbr -a sysstart   systemctl start
 abbr -a systimers  systemctl list-timers
+abbr -a sysreboot  systemctl reboot
 
 abbr -a osquerya osqueryi  --nodisable_audit --nodisable_events --audit_allow_config=true --audit_persist=true --audit_allow_sockets --logger_plugin=filesystem --events_expiry=1
 
 abbr -a act act --bind --container-daemon-socket $XDG_RUNTIME_DIR/podman/podman.sock
+abbr -a torrent 'mtorrent -d ~/Téléchargements/P2P --torrent-dir ~/Téléchargements/ -w ~/Téléchargements/ --magnet-file ~/Téléchargements/magnet.links'
+abbr -a act act --bind --container-daemon-socket /run/user/1000/podman/podman.sock
