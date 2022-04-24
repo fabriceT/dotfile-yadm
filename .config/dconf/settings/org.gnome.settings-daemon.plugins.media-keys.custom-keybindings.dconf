@@ -1,4 +1,4 @@
 [custom0]
 binding='<Super>Return'
-command='/usr/bin/sakura'
+command='/usr/bin/gnome-terminal'
 name='Terminal'
