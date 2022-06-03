@@ -1,6 +1,6 @@
 [/]
 disable-camera=true
-disable-microphone=false
+disable-microphone=true
 hide-identity=false
 old-files-age=uint32 5
 recent-files-max-age=7

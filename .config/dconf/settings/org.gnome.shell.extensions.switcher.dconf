@@ -1,4 +1,5 @@
 [/]
+activate-after-ms=uint32 100
 activate-by-key=uint32 2
 activate-immediately=true
 fade-enable=false
@@ -14,6 +15,8 @@ onboarding-4=uint32 1
 onboarding-5=uint32 1
 onboarding-6=uint32 1
 ordering=uint32 0
+show-executables=true
 show-launcher=['<Super>x']
+show-original-names=false
 show-switcher=['<Super>w']
 workspace-indicator=true
