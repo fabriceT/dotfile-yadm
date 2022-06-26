@@ -1,7 +1,6 @@
-function encfs_doc
-    set SRC /home/phab/.docs
+function gocrypt_doc
+    set SRC /home/phab/.private
     set DEST /home/phab/Documents/Privés
-    set AGENT /usr/lib/seahorse/ssh-askpass
 
     if test ! -d $SRC
         echo "Le répertoire source n'existe pas"
@@ -15,6 +14,6 @@ function encfs_doc
     else
         echo "montage de la partition"
         mkdir -p $DEST
-        encfs $SRC $DEST --extpass=$AGENT
+        gocryptfs $SRC $DEST --extpass (secrettool lookup application gocryptfs disk local)
     end
 end
