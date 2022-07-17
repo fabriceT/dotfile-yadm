@@ -3,13 +3,10 @@ export PAGER=most
 export EDITOR=le
 export TERMINAL=sakura
 
-if [ -f ~/.bash_aliases ]; then
-	. ~/.bash_aliases
-fi
+[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 
-export PATH="/home/phab/.local/bin:$PATH"
-export LUA_CPATH="?.so;/usr/lib/lua/5.1/?.so;/home/phab/.local/share/lib/lua/?.so"
-export LUA_PATH="?.lua;/usr/lib/lua/5.1/?.lua;/home/phab/.local/share/lib/lua/?.lua"
+export PATH="${HOME}/.local/bin:$PATH"
+export LUA_CPATH="?.so;/usr/lib/lua/5.1/?.so;${HOME}/.local/share/lib/lua/?.so"
+export LUA_PATH="?.lua;/usr/lib/lua/5.1/?.lua;${HOME}/.local/share/lib/lua/?.lua"
 
-
-echo "ici bash_profile !"
+[[ -f ~/.bashrc ]] && . ~/.bashrc
