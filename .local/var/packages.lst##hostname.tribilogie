@@ -12,7 +12,9 @@ distrobox
 dog
 dotnet-runtime
 duckstation-qt-bin
+duf
 duperemove
+dust
 ecryptfs-utils
 eog
 epiphany
@@ -136,3 +138,11 @@ prymitive/karma
 adnanh/webhook
 joewalnes/websocketd
 msoap/shell2http
+sharkdp/bat
+HardDie/myTldr
+alexhallam/tv
+TomWright/dasel
+dandavison/delta
+mikefarah/yq
+mgdm/htmlq
+jesseduffield/lazydocker
