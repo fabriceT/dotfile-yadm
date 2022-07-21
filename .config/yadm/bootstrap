@@ -1,7 +1,11 @@
 #!/bin/bash
 
 # User settings
-~/.config/dconf/settings/dconf_inject.sh
+
+## Gnome shell
+if [[ `command -v /usr/bin/gnome-shell` ]] then;
+	~/.config/dconf/settings/dconf_inject.sh
+fi
 
 systemctl --user enable systemd-tmpfiles-setup.service systemd-tmpfiles-clean.timer
 systemctl --user enable --now backup-wallpapers.timer
