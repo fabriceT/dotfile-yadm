@@ -3,7 +3,7 @@
 # User settings
 
 ## Gnome shell
-if [[ `command -v /usr/bin/gnome-shell` ]] then;
+if [[ `command -v /usr/bin/gnome-shell` ]]; then
 	~/.config/dconf/settings/dconf_inject.sh
 fi
 
