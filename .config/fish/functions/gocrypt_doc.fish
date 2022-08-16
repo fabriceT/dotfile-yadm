@@ -1,6 +1,6 @@
 function gocrypt_doc
     set SRC /home/phab/.private
-    set DEST /home/phab/Documents/Privés
+    set DEST /home/phab/Documents/Privé
 
     if test ! -d $SRC
         echo "Le répertoire source n'existe pas"
@@ -14,6 +14,6 @@ function gocrypt_doc
     else
         echo "montage de la partition"
         mkdir -p $DEST
-        gocryptfs $SRC $DEST --extpass (secrettool lookup application gocryptfs disk local)
+        gocryptfs $SRC $DEST -extpass "secret-tool lookup application gocryptfs disk local"
     end
 end
