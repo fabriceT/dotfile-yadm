@@ -10,4 +10,9 @@
 /home/phab/.local/share/zeitgeist
 /home/phab/.local/share/gnome-builder/flatpak
 /home/phab/.config/Code/Cache*
+/home/phab/.config/Code/User/workspace*
+/home/phab/.config/Code/logs
 /home/phab/.config/syncthing
+/home/phab/.config/vivaldi
+/home/phab/.config/libreoffice
+

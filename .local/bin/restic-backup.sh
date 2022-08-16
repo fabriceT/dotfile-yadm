@@ -9,10 +9,10 @@ export RESTIC_PASSWORD
 function backup() {
     export RESTIC_REPOSITORY=$1
 
-    restic forget --keep-monthly 1 --keep-yearly 1 --prune
-
     restic backup --files-from=/home/phab/.config/restic.include \
                   --exclude-file=/home/phab/.config/restic.exclude
+
+    restic forget --keep-weekly 4 --keep-monthly 1 --keep-yearly 1 --prune
 }
 
 
@@ -20,4 +20,4 @@ if [[ -d ${DISK_REPO} ]]; then
     backup ${DISK_REPO}
 fi
 
-#backup ${SFTP_REPO}
+backup ${SFTP_REPO}
