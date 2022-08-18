@@ -9,8 +9,7 @@ export RESTIC_PASSWORD
 function backup() {
     export RESTIC_REPOSITORY=$1
 
-    restic backup --files-from=/home/phab/.config/restic.include \
-                  --exclude-file=/home/phab/.config/restic.exclude
+    restic backup /home/phab --exclude-file=/home/phab/.config/restic.exclude
 
     restic forget --keep-weekly 4 --keep-monthly 1 --keep-yearly 1 --prune
 }
