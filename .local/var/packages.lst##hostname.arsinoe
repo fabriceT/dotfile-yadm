@@ -189,7 +189,7 @@ jq
 patchelf
 python-cerberus
 
-[pacman-deps]
+[stew]
 junegunn/fzf
 FiloSottile/age
 schollz/croc
