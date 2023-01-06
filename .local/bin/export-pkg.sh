@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-EXPORT_FILE=~/.local/var/packages.lst##hostname.$(uname -n)
+EXPORT_FILE=~/Sync/packages-$(uname -n).txt
 echo "${EXPORT_FILE}"
 
 echo "[pacman-explicit]" > "${EXPORT_FILE}"
