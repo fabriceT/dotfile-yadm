@@ -1,0 +1,100 @@
+#!/bin/lua
+
+--[[
+    Script pour déplacer les fichiers de musique en fonction de l'artiste
+
+    Utilise  :
+
+    * (lua-glib)[https://bitbucket.org/darktjm/lua-glib/src/master/] pour quelques fonctions parce que fainéant.
+    * pragha
+    * lua
+]]
+
+local glib = require 'glib'
+
+
+local music_directory = glib.get_dir_name("music")
+
+function Pragha()
+	local handle = io.popen("pragha -c")
+    if handle == nil then
+        print("Oopsie")
+        os.exit(1)
+    end
+	local content = handle:read("*a")
+	handle:close()
+	return content
+end
+
+function CamelCase(s)
+
+    local lower = string.lower(s)
+    local to_upper=true
+    local result = ""
+
+    for i = 1,string.len(lower) do
+        local c = string.sub(lower,i,i)
+
+        if c == '/' then 
+            c = '-'
+        end
+
+        if to_upper == true then
+            result = result .. string.upper(c)
+            to_upper = false
+        else
+            result = result .. c
+        end
+
+        -- On passe en majuscule si on croise le caractères suivants
+        if c == ' ' or c == '.' or c == '-' then
+            to_upper = true
+        end
+    end
+
+    return result
+end
+
+
+local output = Pragha()
+local p = string.find(output, "state")
+
+if (p) then
+	filename_pos, _, filename = glib.regex_new("file: (.*)"):find(output)
+	if filename_pos == nil then
+		print("Filename not found")
+		os.exit()
+	end
+
+	title_pos, _, title = glib.regex_new("title: (.*)"):find(output)
+	if title_pos == nil then
+		print("Title not found")
+		os.exit()
+	end
+
+	artist_pos, _, artist = glib.regex_new("artist: (.*)"):find(output)
+	if artist_pos == nil then
+		print("Artist not found")
+		os.exit()
+	end
+	
+	print(artist, title)
+	
+    local dest_path = string.format("%s/Artistes/%s", music_directory, artist)
+    if not glib.exists(dest_path) then
+        dest_path = string.format("%s/Artistes/%s", music_directory, CamelCase(artist))
+        print("Directory creation", dest_path)
+        glib.mkdir_with_parents(dest_path)
+    end
+
+    local destination = string.format("%s/%s", dest_path, glib.path_get_basename(filename))
+
+    if not glib.exists(destination) then
+        print(string.format("Move '%s' to directory %s", filename, dest_path))
+        if not os.rename(filename, destination) then
+            print("Problème lors du déplacementw")
+        end
+    end
+end
+
+
