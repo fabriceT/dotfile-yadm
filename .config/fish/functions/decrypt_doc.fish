@@ -1,5 +1,5 @@
-function gocrypt_doc
-    set SRC /home/phab/.private
+function decrypt_doc
+    set SRC /home/phab/.cryfs
     set DEST /home/phab/Documents/Privé
 
     if test ! -d $SRC
@@ -9,11 +9,11 @@ function gocrypt_doc
 
     if mount | grep $DEST >/dev/null
         echo "Démontage de la partition"
-        fusermount -u $DEST
+        cryfs-unmount $DEST
         rmdir $DEST
     else
         echo "montage de la partition"
         mkdir -p $DEST
-        gocryptfs $SRC $DEST -extpass "secret-tool lookup application gocryptfs disk local"
+        secret-tool lookup application gocryptfs disk local | cryfs $SRC $DEST
     end
 end
