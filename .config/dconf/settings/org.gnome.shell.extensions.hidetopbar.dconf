@@ -2,7 +2,10 @@
 enable-active-window=true
 enable-intellihide=true
 hot-corner=false
+keep-round-corners=false
 mouse-sensitive=true
+mouse-sensitive-fullscreen-window=true
 mouse-triggers-overview=false
 shortcut-keybind=['<Primary>space']
 shortcut-toggles=true
+show-in-overview=false

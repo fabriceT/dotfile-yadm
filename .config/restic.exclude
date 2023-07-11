@@ -31,6 +31,8 @@
 /home/phab/.local/lib/vivaldi
 /home/phab/.mozilla
 /home/phab/.nuget
+/home/phab/.npm
+/home/phab/.stash
 /home/phab/.thumbnails
 /home/phab/.vscode
 /home/phab/nuclei-templates

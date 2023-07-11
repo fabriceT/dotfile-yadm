@@ -2,7 +2,7 @@
 activate-after-ms=uint32 100
 activate-by-key=uint32 2
 activate-immediately=true
-fade-enable=false
+fade-enable=true
 font-size=uint32 32
 launcher-stats='{sakura.desktop:1,org.gnome.Weather.desktop:1,firefox.desktop:1,org.gnome.Recipes.desktop:1}'
 matching=uint32 1
@@ -14,7 +14,7 @@ onboarding-3=uint32 1
 onboarding-4=uint32 1
 onboarding-5=uint32 1
 onboarding-6=uint32 1
-ordering=uint32 0
+ordering=uint32 1
 show-executables=true
 show-launcher=['<Super>x']
 show-original-names=false
