@@ -32,3 +32,5 @@ abbr -a osquerya osqueryi --nodisable_audit --nodisable_events --audit_allow_con
 
 abbr -a act act --bind --container-daemon-socket {$XDG_RUNTIME_DIR}/podman/podman.sock
 abbr -a torrent 'mtorrent -d ~/Téléchargements/P2P --torrent-dir ~/Téléchargements/ -w ~/Téléchargements/ --magnet-file ~/Téléchargements/magnet.links'
+
+abbr tldr myTldr

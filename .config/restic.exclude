@@ -7,6 +7,8 @@
 /home/phab/Sync
 /home/phab/Téléchargements
 /home/phab/Vidéos
+/home/phab/VirtualBox\ VMs
+/home/phab/.ansible
 /home/phab/.cache
 /home/phab/.cargo	
 /home/phab/.config/Code/Cache*
@@ -20,6 +22,7 @@
 /home/phab/.ghidra
 /home/phab/.gradle
 /home/phab/.java
+/home/phab/.librewolf
 /home/phab/.local/share/containers
 /home/phab/.local/share/flatpak
 /home/phab/.local/share/Trash
@@ -33,6 +36,8 @@
 /home/phab/.nuget
 /home/phab/.npm
 /home/phab/.stash
+/home/phab/.private
+/home/phab/.private2
 /home/phab/.thumbnails
 /home/phab/.vscode
 /home/phab/nuclei-templates
