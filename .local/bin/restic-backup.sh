@@ -7,7 +7,7 @@ declare -A REPOSITORIES=(
 
 function backup() {
     restic backup "${HOME}" --exclude-file="${HOME}/.config/restic.exclude"
-    restic forget --keep-weekly 1m --keep-monthly 1y --keep-yearly 2y --prune
+    restic forget --keep-weekly 5 --keep-monthly 12 --keep-yearly 2 --prune
 }
 
 for location in ${!REPOSITORIES[@]}; do
