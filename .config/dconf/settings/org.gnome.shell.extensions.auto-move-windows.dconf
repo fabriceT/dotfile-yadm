@@ -1,2 +1,2 @@
 [/]
-application-list=['org.gnome.Builder.desktop:3', 'firefox.desktop:1', 'visual-studio-code.desktop:3', 'mpv.desktop:3', 'org.gnome.Terminal.desktop:2', 'pragha.desktop:4', 'org.gnome.Rhythmbox3.device.desktop:4', 'org.gnome.Rhythmbox3.desktop:4']
+application-list=['org.gnome.Builder.desktop:3', 'firefox.desktop:1', 'mpv.desktop:3', 'org.gnome.Terminal.desktop:2', 'pragha.desktop:4', 'org.gnome.Rhythmbox3.device.desktop:4', 'org.gnome.Rhythmbox3.desktop:4', 'com.github.johnfactotum.Foliate.desktop:3']
