@@ -11,5 +11,3 @@ set -gx VIRTUAL_ENV_DISABLE_PROMPT "I'm not empty"
 set -gx DOCKER_HOST unix://$XDG_RUNTIME_DIR/podman/podman.sock
 
 source ~/.config/fish/alias.fish
-
-oh-my-posh init fish --config /usr/share/oh-my-posh/themes/peru.omp.json | source
