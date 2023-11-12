@@ -11,3 +11,6 @@ pacman -Qtd | awk '{ print $1 }' >> "${EXPORT_FILE}"
 
 echo -e "\n[stew]" >> "${EXPORT_FILE}"
 stew ls --tags | awk '{ print $1 }' >> "${EXPORT_FILE}"
+
+echo -e "\n[fisher]" >> "${EXPORT_FILE}"
+cat $HOME/.config/fish/fish_plugins >> "${EXPORT_FILE}"
