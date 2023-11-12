@@ -13,4 +13,4 @@ echo -e "\n[stew]" >> "${EXPORT_FILE}"
 stew ls --tags >> "${EXPORT_FILE}"
 
 echo -e "\n[fisher]" >> "${EXPORT_FILE}"
-cat $HOME/.config/fish/fish_plugins >> "${EXPORT_FILE}"
+sort $HOME/.config/fish/fish_plugins >> "${EXPORT_FILE}"
