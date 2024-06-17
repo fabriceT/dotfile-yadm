@@ -1,0 +1,7 @@
+[Unit]
+Description=Export installed packages
+
+[Service]
+Type=oneshot
+Nice=19
+ExecStart=/home/phab/.local/bin/export-pkg.sh
