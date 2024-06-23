@@ -1,0 +1,3 @@
+[directories]
+cache_dir = "/home/phab/.local/share/tldr/cache"
+custom_pages_dir = "/home/phab/.local/share/tldr/custom-pages"

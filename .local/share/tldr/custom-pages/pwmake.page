@@ -1,0 +1,8 @@
+# pwmake
+
+> Créer un mot de passe aléatoire relativement prononcable selon une valeur d'entropie.
+> Voir aussi <https://github.com/libpwquality/libpwquality>
+
+- Création du mot de passe 
+
+`pwmake 107`

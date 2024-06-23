@@ -1,0 +1,8 @@
+# pwscore
+
+> Evalue l'entropie d'un mot de passe
+> Voir aussi : <https://github.com/libpwquality/libpwquality>
+
+- Teste d'un mot de passe contenu dans `$PASSWORD`
+
+`echo $PASSWORD | pwscore`
