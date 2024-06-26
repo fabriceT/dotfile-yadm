@@ -1,12 +1,8 @@
 # aliases.fish
 
 ## GIT
-abbr -a gick git checkout
-abbr -a gico git commit -m
-abbr -a gist git status
+# see `gitnow` 
 abbr -a gisw git switch
-abbr -a gipl git pull
-abbr -a giph git push
 
 ## YADM
 abbr -a yadck yadm checkout
