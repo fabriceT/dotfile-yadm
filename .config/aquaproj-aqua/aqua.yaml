@@ -25,3 +25,5 @@ packages:
 - name: minamijoyo/tfupdate@v0.8.2
 - name: opentofu/opentofu@v1.7.2
 - name: terramate-io/terramate@v0.9.0
+- name: wagoodman/dive@v0.12.0
+- name: cheat/cheat@4.4.2
