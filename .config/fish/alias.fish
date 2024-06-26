@@ -31,8 +31,6 @@ abbr -a systimers systemctl list-timers
 abbr -a sysreboot systemctl reboot
 
 ## terraform
-abbr -a tfi terraform init
-abbr -a tfp terraform plan -out=terraform.tfstate.plan
 abbr -a tfo terraform output
 abbr -a tfa terraform apply terraform.tfstate.plan
 
