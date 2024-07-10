@@ -2,6 +2,12 @@ fish_add_path ~/go/bin ~/.local/bin ~/.local/share/aquaproj-aqua/bin
 
 zoxide init fish | source
 
+# atuin
+set -gx ATUIN_NOBIND "true"
+atuin init fish | source
+bind \cr _atuin_search
+bind -M insert \cr _atuin_search
+
 set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/gcr/ssh
 set -gx MOZ_ENABLE_WAYLAND 1
 set -gx EDITOR micro
