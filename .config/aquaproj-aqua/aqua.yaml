@@ -27,3 +27,5 @@ packages:
 - name: terramate-io/terramate@v0.9.0
 - name: wagoodman/dive@v0.12.0
 - name: cheat/cheat@4.4.2
+- name: jesseduffield/lazydocker@v0.23.3
+- name: atuinsh/atuin@v18.3.0
