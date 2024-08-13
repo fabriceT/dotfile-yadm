@@ -1,4 +1,4 @@
-l[Unit]
+[Unit]
 Description=Export packages timer
 RefuseManualStart=no
 RefuseManualStop=no
