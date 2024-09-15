@@ -8,13 +8,15 @@ function encode --description "Encode video files to x265 mp4"
     end
 
     echo "Listing files $pattern in current directory"
-    set -l files (find . -maxdepth 2 -name $pattern)
+    set -l files (find . -maxdepth 2 -name $pattern | sort)
     if test (count $files) -gt 1
-        mkdir new 2>/dev/null
         for file in $files
-            set dir (dirname $file)
+            set -l dir (dirname $file)
             mkdir -p new/$dir
-            ffmpeg -i $file -c:v libx265 -crf 32 -c:a aac -b:a 96k new/$file
+            if ! ffmpeg -i $file -c:v libx265 -crf 32 -c:a aac -b:a 96k new/$file
+                rm new/$file
+                return 1
+            end
         end
     end
 end
