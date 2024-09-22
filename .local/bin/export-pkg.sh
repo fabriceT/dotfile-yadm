@@ -17,3 +17,6 @@ sort $HOME/.config/fish/fish_plugins >> "${EXPORT_FILE}"
 
 echo -e "\n[gox]" >> "${EXPORT_FILE}"
 gox list >> "${EXPORT_FILE}"
+
+echo -e "\n[aqua]" >> "${EXPORT_FILE}"
+aqua list -i -a | awk '{ print $1" "$2 }' >> "${EXPORT_FILE}"
