@@ -3,10 +3,15 @@
 # User settings
 
 ## Gnome shell
-if [[ `command -v /usr/bin/gnome-shell` ]]; then
+if command -v gnome-shell; then
 	~/.config/dconf/settings/dconf_inject.sh
 fi
 
 systemctl --user enable systemd-tmpfiles-setup.service systemd-tmpfiles-clean.timer
 systemctl --user enable --now backup-wallpapers.timer
 systemctl --user enable --now cache_clean.timer
+
+if command -v fish; then
+	curl https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish -o /tmp/fisher.fish
+	fish -c "source /tmp/fisher.fish && fisher install jorgebucaran/fisher"
+fi
