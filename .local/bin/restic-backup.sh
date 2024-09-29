@@ -1,8 +1,10 @@
 #!/bin/env bash
 
+set -euo pipefail
+
 declare -A REPOSITORIES=(
   [disk]="/run/media/${USER}/1ea5cfde-2f7d-4b3f-b4c0-417473d14af1/backup/"
-#  [remote]="sftp:thfa9713@www.kill-swit.ch:/home/thfa9713/restic-repo/" 
+  [remote]="sftp:thfa9713@www.kill-swit.ch:/home/thfa9713/restic-repo/"
 )
 
 function backup() {
