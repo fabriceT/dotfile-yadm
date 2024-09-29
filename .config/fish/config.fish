@@ -16,6 +16,7 @@ set -gx AQUA_GLOBAL_CONFIG $HOME/.config/aquaproj-aqua/aqua.yaml
 
 # Python virtual env won't override my prompt
 set -gx VIRTUAL_ENV_DISABLE_PROMPT "I'm not empty"
+set -gx WORKON_HOME ~/.venvs
 
 # Fix act https://github.com/nektos/act/issues/303
 set -gx DOCKER_HOST unix://$XDG_RUNTIME_DIR/podman/podman.sock
