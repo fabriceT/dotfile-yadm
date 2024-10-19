@@ -15,6 +15,7 @@ function backup() {
 for location in "${!REPOSITORIES[@]}"; do
 	echo "$location"
 	export RESTIC_REPOSITORY="${REPOSITORIES[$location]}"
-	export RESTIC_PASSWORD=$(secret-tool lookup application restic)
+	RESTIC_PASSWORD=$(secret-tool lookup application restic) || exit 1
+	export RESTIC_PASSWORD
 	backup
 done
