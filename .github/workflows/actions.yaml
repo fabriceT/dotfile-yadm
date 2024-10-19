@@ -11,5 +11,9 @@ jobs:
     name: Run Shellcheck
     runs-on: ubuntu-latest
     steps:
+      - name: Ceckout repository
+        uses: actions/checkout@v4
       - name: Run ShellCheck
         uses: ludeeus/action-shellcheck@master
+        with:
+         scandir: './.local/bin'
