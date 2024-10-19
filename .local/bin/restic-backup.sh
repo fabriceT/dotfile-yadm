@@ -8,13 +8,13 @@ declare -A REPOSITORIES=(
 )
 
 function backup() {
-    restic backup "${HOME}" --exclude-file="${HOME}/.config/restic.exclude"
-    restic forget --keep-weekly 5 --keep-monthly 12 --keep-yearly 2 --prune --host $(hostname)
+    restic backup "$HOME" --exclude-file="${HOME}/.config/restic.exclude"
+    restic forget --keep-weekly 5 --keep-monthly 12 --keep-yearly 2 --prune --host "$(hostname)"
 }
 
-for location in ${!REPOSITORIES[@]}; do
-	echo $location
-	export RESTIC_REPOSITORY=${REPOSITORIES[$location]}
+for location in "${!REPOSITORIES[@]}"; do
+	echo "$location"
+	export RESTIC_REPOSITORY="${REPOSITORIES[$location]}"
 	export RESTIC_PASSWORD=$(secret-tool lookup application restic)
 	backup
 done
