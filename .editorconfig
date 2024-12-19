@@ -1,20 +1,24 @@
 root = true
 
 [*]
+charset = utf-8
 end_of_line = lf
 insert_final_newline = true
-indent_size = 4
+indent_size = tab
+indent_style = space
 trim_trailing_whitespace = true
+tab_width = 4
+max_line_length = 80
 
 [*.md]
-indent_style = space
 indent_size = 2
-
-[*.y{,a}ml]
 indent_style = space
-indent_size = 2
+tab_width = 2
 
+[{*.html,*.xml,*.xml.in,*.yml,*.yaml}]
+indent_size = 2
+indent_style = space
 
 [*.{py,lua,c}]
-indent_style = space
 indent_size = 4
+indent_style = space
