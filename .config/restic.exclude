@@ -23,11 +23,14 @@
 /home/phab/.gradle
 /home/phab/.java
 /home/phab/.librewolf
+/home/phab/.local/share/aquaproj-aqua/pkgs
+/home/phab/.local/share/com.github.babluboy.bookworm
 /home/phab/.local/share/containers
 /home/phab/.local/share/flatpak
 /home/phab/.local/share/Trash
 /home/phab/.local/share/stew/pkg
 /home/phab/.local/share/tracker
+/home/phab/.local/share/powershell/Modules
 /home/phab/.local/share/NuGet
 /home/phab/.local/share/zeitgeist
 /home/phab/.local/share/gnome-builder/flatpak
