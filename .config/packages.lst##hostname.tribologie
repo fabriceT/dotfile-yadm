@@ -147,10 +147,12 @@ zramswap
 go
 nm-connection-editor
 python-uc-micro-py
-scdoc
 sysfsutils
 ttf-opensans
-wayland-protocols
+
+[flatpack]
+Flatseal	com.github.tchx84.Flatseal	2.3.0	stable
+DuckStation	org.duckstation.DuckStation	0.1-8153-g31c1cfa65	stable
 
 [stew]
 nektos/act@v0.2.65
