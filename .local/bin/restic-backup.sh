@@ -8,7 +8,7 @@ declare -A REPOSITORIES=(
 )
 
 function backup() {
-    restic backup "$HOME" --exclude-file="${HOME}/.config/restic.exclude"
+    restic backup "$HOME" --exclude-caches --exclude-file="${HOME}/.config/restic.exclude"
     restic forget --keep-weekly 5 --keep-monthly 12 --keep-yearly 2 --prune --host "$(hostname)"
 }
 

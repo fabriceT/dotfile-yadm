@@ -10,7 +10,7 @@
 /home/phab/VirtualBox\ VMs
 /home/phab/.ansible
 /home/phab/.cache
-/home/phab/.cargo	
+/home/phab/.cargo
 /home/phab/.config/Code/Cache*
 /home/phab/.config/Code/User/workspace*
 /home/phab/.config/Code/logs
