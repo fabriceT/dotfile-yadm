@@ -1,3 +1,4 @@
+
 #!/bin/env bash
 
 EXPORT_FILE=~/.config/packages.lst##hostname.$(uname -n)
@@ -5,7 +6,7 @@ echo "${EXPORT_FILE}"
 
 export_pacman() {
 	command -v pacman || return
-	
+
 	echo "[pacman-explicit]" > "${EXPORT_FILE}"
 	# shellcheck disable=SC2129
 	pacman -Qte | awk '{ print $1 }' >> "${EXPORT_FILE}"
@@ -14,9 +15,16 @@ export_pacman() {
 	pacman -Qtd | awk '{ print $1 }' >> "${EXPORT_FILE}"
 }
 
+export_flatpak() {
+	command -v flatpak || return
+
+	echo -e "\n[flatpack]" >> "${EXPORT_FILE}"
+	flatpak list --app --columns=name,application,version,branch >> "${EXPORT_FILE}"
+}
+
 export_stew() {
 	command -v stew || return
-	
+
 	echo -e "\n[stew]" >> "${EXPORT_FILE}"
 	stew ls --tags >> "${EXPORT_FILE}"
 }
@@ -24,36 +32,32 @@ export_stew() {
 export_fisher() {
     local PLUGINS="${HOME}/.config/fish/fish_plugins"
 
-    [[ ! -f $PLUGINS ]] && return
-    
+    [[ -f $PLUGINS ]] || return
+
 	echo -e "\n[fisher]" >> "${EXPORT_FILE}"
 	sort "${PLUGINS}" >> "${EXPORT_FILE}"
 }
 
 export_gox() {
 	command -v gox || return
-	
+
 	echo -e "\n[gox]" >> "${EXPORT_FILE}"
 	gox list >> "${EXPORT_FILE}"
 }
 
 export_aqua() {
 	command -v aqua || return
-	
+
 	echo -e "\n[aqua]" >> "${EXPORT_FILE}"
 	aqua list -i -a | awk '{ print $1" "$2 }' >> "${EXPORT_FILE}"
 }
  
 export_pacman
+export_flatpak
 export_stew
 export_fisher
 export_gox
 export_aqua
 
-
-
-
-
-
-# yadm add "${EXPORT_FILE}"
-# yadm commit -m "chore: update packages list"
+yadm add "${EXPORT_FILE}"
+yadm commit -m "chore: update packages list"
