@@ -184,7 +184,8 @@ common_subcommands = [
 #   "tmux",
   "talosctl",
 #   "yarn",
-  "yay"
+  "yay",
+  "yadm"
 ]
 
 ## Set commands that should be totally stripped and ignored from stats
@@ -193,6 +194,7 @@ common_subcommands = [
 ## Set commands that will be completely ignored from stats
 ignored_commands = [
   "cat",
+  "bat",
   "cd",
   "ls",
   "micro",
