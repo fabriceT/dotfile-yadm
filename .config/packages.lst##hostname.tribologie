@@ -146,7 +146,6 @@ zramswap
 [pacman-deps]
 go
 nm-connection-editor
-python-uc-micro-py
 sysfsutils
 ttf-opensans
 
