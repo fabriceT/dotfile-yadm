@@ -12,6 +12,7 @@ arduino
 aspell-fr
 astyle
 at
+atuin
 bat
 bc
 bees
@@ -39,6 +40,7 @@ dotnet-sdk
 duperemove
 esptool
 etckeeper
+evolution
 eza
 f3
 fail2ban
@@ -217,6 +219,7 @@ termv
 testdisk
 thunderbird
 tlock
+transmission-gtk
 trivy
 ttf-bitstream-vera-mono-nerd
 ttf-comfortaa
@@ -279,6 +282,26 @@ mgdm/htmlq@v0.4.0
 quantumsheep/sshs@4.5.1
 pspiagicw/gox@v0.0.2
 
+[fisher]
+alaz-oz/fish-insulter
+brewingweasel/fishbang
+decors/fish-ghq
+gazorby/fish-abbreviation-tips
+grimoh/fish-aqua
+ilancosman/tide@v6
+joehillen/to-fish
+jorgebucaran/spark.fish
+joseluisq/gitnow@2.11.0
+joseluisq/gitnow@2.12.0
+marcransome/pond
+meaningful-ooo/sponge
+mong8se/actually.fish
+nickeb96/puffer-fish
+oakninja/makemefish
+otms61/fish-pet
+patrickf1/fzf.fish
+veirt/web-search.fish
+
 [gox]
  [=!] Not using $XDG_DATA_HOME, env variable not present
  [=!] Using /home/phab/.local/share for data
@@ -286,17 +309,17 @@ pspiagicw/gox@v0.0.2
 ┌────────────────┬────────────────────────────────────────────┬───────────────────────────────────────────────────────┐
 │  Package Name  │                Package Path                │                      Package URL                      │
 ├────────────────┼────────────────────────────────────────────┼───────────────────────────────────────────────────────┤
-│  whois         │  /home/phab/.local/share/gox/bin/whois     │  github.com/likexian/whois/cmd/whois@latest           │
-│  gokey         │  /home/phab/.local/share/gox/bin/gokey     │  github.com/cloudflare/gokey/cmd/gokey@v0.1.3         │
-│  nap           │  /home/phab/.local/share/gox/bin/nap       │  github.com/maaslalani/nap@latest                     │
-│  pet           │  /home/phab/.local/share/gox/bin/pet       │  github.com/knqyf263/pet@latest                       │
+│  gox           │  /home/phab/.local/share/gox/bin/gox       │  github.com/pspiagicw/gox@latest                      │
 │  qemantra      │  /home/phab/.local/share/gox/bin/qemantra  │  github.com/pspiagicw/qemantra@v0.2.3                 │
 │  repoctl       │  /home/phab/.local/share/gox/bin/repoctl   │  github.com/cassava/repoctl@v0.22.2                   │
 │  sake          │  /home/phab/.local/share/gox/bin/sake      │  github.com/alajmo/sake@latest                        │
 │  air           │  /home/phab/.local/share/gox/bin/air       │  github.com/air-verse/air@latest                      │
-│  cowsay        │  /home/phab/.local/share/gox/bin/cowsay    │  github.com/Code-Hex/Neo-cowsay/cmd/v2/cowsay@v2.0.4  │
 │  enola         │  /home/phab/.local/share/gox/bin/enola     │  github.com/theyahya/enola/cmd/enola@latest           │
-│  gox           │  /home/phab/.local/share/gox/bin/gox       │  github.com/pspiagicw/gox@latest                      │
+│  gokey         │  /home/phab/.local/share/gox/bin/gokey     │  github.com/cloudflare/gokey/cmd/gokey@v0.1.3         │
+│  nap           │  /home/phab/.local/share/gox/bin/nap       │  github.com/maaslalani/nap@latest                     │
+│  pet           │  /home/phab/.local/share/gox/bin/pet       │  github.com/knqyf263/pet@latest                       │
+│  whois         │  /home/phab/.local/share/gox/bin/whois     │  github.com/likexian/whois/cmd/whois@latest           │
+│  cowsay        │  /home/phab/.local/share/gox/bin/cowsay    │  github.com/Code-Hex/Neo-cowsay/cmd/v2/cowsay@v2.0.4  │
 └────────────────┴────────────────────────────────────────────┴───────────────────────────────────────────────────────┘
 
 [aqua]
@@ -305,15 +328,18 @@ mgdm/htmlq v0.4.0
 fiatjaf/jiq v0.7.2
 fujiwara/tfstate-lookup v1.4.2
 sharkdp/fd v10.2.0
-projectdiscovery/naabu v2.3.3
-aquasecurity/tfsec v1.28.11
+projectdiscovery/naabu v2.3.4
+aquasecurity/tfsec v1.28.13
 minamijoyo/tfschema v0.7.9
 minamijoyo/tfupdate v0.8.5
-terramate-io/terramate v0.11.4
+terramate-io/terramate v0.11.8
 wagoodman/dive v0.12.0
 cheat/cheat 4.4.2
 jesseduffield/lazydocker v0.24.1
 TomWright/dasel v2.8.1
-atuinsh/atuin v18.3.0
-goreleaser/goreleaser v2.5.0
-golangci/golangci-lint v1.62.2
+atuinsh/atuin v18.4.0
+goreleaser/goreleaser v2.6.1
+golangci/golangci-lint v1.63.4
+version-fox/vfox v0.6.0
+numtide/treefmt v2.1.1
+knqyf263/pet v1.0.1
