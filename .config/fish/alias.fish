@@ -1,7 +1,7 @@
 # aliases.fish
 
 ## GIT
-# see `gitnow` 
+# see `gitnow`
 abbr -a gisw git switch
 
 ## YADM
@@ -34,4 +34,4 @@ abbr -a tfa terraform apply terraform.tfstate.plan
 abbr -a osquerya osqueryi --nodisable_audit --nodisable_events --audit_allow_config=true --audit_persist=true --audit_allow_sockets --logger_plugin=filesystem --events_expiry=1
 
 abbr -a act act --bind --container-daemon-socket {$XDG_RUNTIME_DIR}/podman/podman.sock
-abbr -a torrent 'mtorrent -d ~/Téléchargements/P2P --torrent-dir ~/Téléchargements/ -w ~/Téléchargements/ --magnet-file ~/magnets.link'
+abbr -a spf superfile

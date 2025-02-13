@@ -196,9 +196,13 @@ ignored_commands = [
   "cat",
   "bat",
   "cd",
+  "grep",
   "ls",
   "micro",
-  "vi"
+  "pacman",
+  "rm",
+  "vi",
+  "yay",
 ]
 
 [keys]
