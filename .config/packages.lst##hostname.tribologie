@@ -79,7 +79,6 @@ minder
 mkcert
 mkosi
 molecule-plugins
-mpv
 nano
 nautilus
 ncdu
@@ -120,13 +119,17 @@ sshfs
 syncthing
 syslinux
 telegram-desktop
+termv
+terraform
 texinfo
+transmission-gtk
 trivy
 ttf-fira-code
 ttf-iosevka-nerd
 ttf-nerd-fonts-symbols
 ttf-windows
 usbutils
+uv
 vala-language-server
 vala-lint-git
 virt-viewer
@@ -144,6 +147,7 @@ zoxide
 zramswap
 
 [pacman-deps]
+cmake
 go
 nm-connection-editor
 sysfsutils
@@ -199,14 +203,14 @@ veirt/web-search.fish
 ┌────────────────┬──────────────────────────────────────────┬───────────────────────────────────────────────────────┐
 │  Package Name  │               Package Path               │                      Package URL                      │
 ├────────────────┼──────────────────────────────────────────┼───────────────────────────────────────────────────────┤
+│  nap           │  /home/phab/.local/share/gox/bin/nap     │  github.com/maaslalani/nap@latest                     │
 │  cowsay        │  /home/phab/.local/share/gox/bin/cowsay  │  github.com/Code-Hex/Neo-cowsay/cmd/v2/cowsay@latest  │
 │  gox           │  /home/phab/.local/share/gox/bin/gox     │  github.com/pspiagicw/gox@latest                      │
-│  nap           │  /home/phab/.local/share/gox/bin/nap     │  github.com/maaslalani/nap@latest                     │
 └────────────────┴──────────────────────────────────────────┴───────────────────────────────────────────────────────┘
 
 [aqua]
-fujiwara/tfstate-lookup v1.4.2
+fujiwara/tfstate-lookup v1.5.0
 minamijoyo/tfschema v0.7.9
 minamijoyo/tfupdate v0.8.5
 aquaproj/example-go-slsa-provenance v0.1.3
-slsa-framework/slsa-verifier v2.6.0
+slsa-framework/slsa-verifier v2.7.0
