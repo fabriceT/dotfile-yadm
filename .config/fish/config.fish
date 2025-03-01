@@ -1,6 +1,7 @@
 set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/gcr/ssh
 set -gx MOZ_ENABLE_WAYLAND 1
 set -gx EDITOR micro
+set -gx GOPATH ~/go
 set -gx CHARM_HOST 130.61.241.116
 set -gx AQUA_GLOBAL_CONFIG $HOME/.config/aquaproj-aqua/aqua.yaml
 
