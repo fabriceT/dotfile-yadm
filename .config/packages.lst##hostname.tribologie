@@ -13,6 +13,7 @@ beets
 bleachbit
 bookworm
 brightnessctl
+broot
 budgie-extras
 charm
 clamav
@@ -40,6 +41,7 @@ foliate
 fuzzel
 geary
 ghq
+gimp
 glances
 gnome-boxes
 gnome-builder
@@ -49,6 +51,7 @@ gnome-power-manager
 gnome-tweaks
 go-yq
 gocryptfs
+goreleaser
 gparted
 grammalecte
 gthumb
@@ -72,7 +75,6 @@ linux-headers
 linux-lts
 lynis
 mako
-man-db
 mc
 micro
 minder
@@ -86,6 +88,7 @@ nmap
 nwg-look
 onedriver
 opensnitch
+opentofu
 openttd
 os-prober
 otf-fira-mono
@@ -102,7 +105,6 @@ powerline-fonts
 powershell-bin
 pragha
 pre-commit
-prometheus
 prometheus-node-exporter
 promtail
 restic
@@ -120,7 +122,6 @@ syncthing
 syslinux
 telegram-desktop
 termv
-terraform
 texinfo
 transmission-gtk
 trivy
@@ -147,11 +148,16 @@ zoxide
 zramswap
 
 [pacman-deps]
+adobe-source-code-pro-fonts
 cmake
+d-spy
 go
+gtk2
 nm-connection-editor
+python-pyaml
 sysfsutils
 ttf-opensans
+vulkan-headers
 
 [flatpack]
 Flatseal	com.github.tchx84.Flatseal	2.3.0	stable
@@ -203,9 +209,9 @@ veirt/web-search.fish
 ┌────────────────┬──────────────────────────────────────────┬───────────────────────────────────────────────────────┐
 │  Package Name  │               Package Path               │                      Package URL                      │
 ├────────────────┼──────────────────────────────────────────┼───────────────────────────────────────────────────────┤
-│  nap           │  /home/phab/.local/share/gox/bin/nap     │  github.com/maaslalani/nap@latest                     │
 │  cowsay        │  /home/phab/.local/share/gox/bin/cowsay  │  github.com/Code-Hex/Neo-cowsay/cmd/v2/cowsay@latest  │
 │  gox           │  /home/phab/.local/share/gox/bin/gox     │  github.com/pspiagicw/gox@latest                      │
+│  nap           │  /home/phab/.local/share/gox/bin/nap     │  github.com/maaslalani/nap@latest                     │
 └────────────────┴──────────────────────────────────────────┴───────────────────────────────────────────────────────┘
 
 [aqua]
@@ -214,3 +220,6 @@ minamijoyo/tfschema v0.7.9
 minamijoyo/tfupdate v0.8.5
 aquaproj/example-go-slsa-provenance v0.1.3
 slsa-framework/slsa-verifier v2.7.0
+version-fox/vfox v0.6.0
+iawia002/lux v0.24.1
+terramate-io/terramate v0.12.1
