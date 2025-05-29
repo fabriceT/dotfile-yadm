@@ -14,7 +14,8 @@ bleachbit
 bookworm
 brightnessctl
 broot
-budgie-extras
+chaotic-keyring
+chaotic-mirrorlist
 charm
 clamav
 consul
@@ -22,13 +23,13 @@ croc
 cryfs
 cue
 dconf-editor
+deadbeef
 debootstrap
 distrobox
 dog
 dotnet-sdk
 duf
 duperemove
-dust
 eog
 esptool
 etckeeper
@@ -38,7 +39,6 @@ fail2ban
 firefox-i18n-fr
 fisher
 foliate
-fuzzel
 geary
 ghq
 gimp
@@ -46,15 +46,12 @@ glances
 gnome-boxes
 gnome-builder
 gnome-font-viewer
-gnome-pomodoro-git
-gnome-power-manager
-gnome-tweaks
 go-yq
+gobject-introspection
 gocryptfs
 goreleaser
 gparted
 grammalecte
-gthumb
 htop
 hunspell-fr
 hyphen-fr
@@ -63,8 +60,6 @@ inetutils
 inkscape
 iotop
 isync
-kanshi
-labwc
 le
 libpam-google-authenticator
 libreoffice-still-fr
@@ -73,8 +68,8 @@ lightdm-gtk-greeter-settings
 lighttpd
 linux-headers
 linux-lts
+lua-lgi-git
 lynis
-mako
 mc
 micro
 minder
@@ -84,6 +79,7 @@ molecule-plugins
 nano
 nautilus
 ncdu
+niri
 nmap
 nwg-look
 onedriver
@@ -93,9 +89,8 @@ openttd
 os-prober
 otf-fira-mono
 otf-firamono-nerd
-otf-font-awesome
 pacman-contrib
-patch
+pavucontrol
 pcmanfm-gtk3
 php-cgi
 php-gd
@@ -103,10 +98,7 @@ php-sqlite
 pngquant
 powerline-fonts
 powershell-bin
-pragha
 pre-commit
-prometheus-node-exporter
-promtail
 restic
 rsync
 rtl_433
@@ -118,17 +110,18 @@ skate
 sqlite-doc
 sqlitestudio-plugins
 sshfs
+swayidle
 syncthing
 syslinux
 telegram-desktop
 termv
-texinfo
 transmission-gtk
 trivy
 ttf-fira-code
 ttf-iosevka-nerd
 ttf-nerd-fonts-symbols
 ttf-windows
+usbguard
 usbutils
 uv
 vala-language-server
@@ -136,6 +129,8 @@ vala-lint-git
 virt-viewer
 visual-studio-code-bin
 vivaldi
+wayland-utils
+wev
 wireguard-tools
 wireless_tools
 wireshark-qt
@@ -149,15 +144,11 @@ zramswap
 
 [pacman-deps]
 adobe-source-code-pro-fonts
-cmake
 d-spy
 go
-gtk2
 nm-connection-editor
-python-pyaml
 sysfsutils
 ttf-opensans
-vulkan-headers
 
 [flatpack]
 Flatseal	com.github.tchx84.Flatseal	2.3.0	stable
