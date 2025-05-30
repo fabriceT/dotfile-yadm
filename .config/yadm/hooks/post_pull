@@ -2,31 +2,31 @@
 #!/bin/env bash
 
 EXPORT_FILE=~/.config/packages.lst##hostname.$(uname -n)
-echo "${EXPORT_FILE}"
+EXPORT_NEW="${EXPORT_FILE}.new"
 
 export_pacman() {
 	command -v pacman || return
 
-	echo "[pacman-explicit]" > "${EXPORT_FILE}"
+	echo "[pacman-explicit]" > "${EXPORT_NEW}"
 	# shellcheck disable=SC2129
-	pacman -Qte | awk '{ print $1 }' >> "${EXPORT_FILE}"
+	pacman -Qte | awk '{ print $1 }' >> "${EXPORT_NEW}"
 
-	echo -e "\n[pacman-deps]" >> "${EXPORT_FILE}"
-	pacman -Qtd | awk '{ print $1 }' >> "${EXPORT_FILE}"
+	echo -e "\n[pacman-deps]" >> "${EXPORT_NEW}"
+	pacman -Qtd | awk '{ print $1 }' >> "${EXPORT_NEW}"
 }
 
 export_flatpak() {
 	command -v flatpak || return
 
-	echo -e "\n[flatpack]" >> "${EXPORT_FILE}"
-	flatpak list --app --columns=name,application,version,branch >> "${EXPORT_FILE}"
+	echo -e "\n[flatpack]" >> "${EXPORT_NEW}"
+	flatpak list --app --columns=name,application,version,branch >> "${EXPORT_NEW}"
 }
 
 export_stew() {
 	command -v stew || return
 
-	echo -e "\n[stew]" >> "${EXPORT_FILE}"
-	stew ls --tags >> "${EXPORT_FILE}"
+	echo -e "\n[stew]" >> "${EXPORT_NEW}"
+	stew ls --tags >> "${EXPORT_NEW}"
 }
 
 export_fisher() {
@@ -34,30 +34,39 @@ export_fisher() {
 
     [[ -f $PLUGINS ]] || return
 
-	echo -e "\n[fisher]" >> "${EXPORT_FILE}"
-	sort "${PLUGINS}" >> "${EXPORT_FILE}"
+	echo -e "\n[fisher]" >> "${EXPORT_NEW}"
+	sort "${PLUGINS}" >> "${EXPORT_NEW}"
 }
 
 export_gox() {
 	command -v gox || return
 
-	echo -e "\n[gox]" >> "${EXPORT_FILE}"
-	gox list >> "${EXPORT_FILE}"
+	echo -e "\n[gox]" >> "${EXPORT_NEW}"
+	gox list >> "${EXPORT_NEW}"
 }
 
 export_aqua() {
 	command -v aqua || return
 
-	echo -e "\n[aqua]" >> "${EXPORT_FILE}"
-	aqua list -i -a | awk '{ print $1" "$2 }' >> "${EXPORT_FILE}"
+	echo -e "\n[aqua]" >> "${EXPORT_NEW}"
+	aqua list -i -a | awk '{ print $1" "$2 }' >> "${EXPORT_NEW}"
 }
- 
+
 export_pacman
 export_flatpak
 export_stew
 export_fisher
-export_gox
+#export_gox
 export_aqua
+
+
+if diff -q "${EXPORT_FILE}" "${EXPORT_NEW}"; then
+    echo "no diff!"
+else
+    diff -aur "${EXPORT_FILE}" "${EXPORT_NEW}"
+    mv "${EXPORT_NEW}" "${EXPORT_FILE}"
+    echo copy!
+fi
 
 yadm add "${EXPORT_FILE}"
 yadm commit -m "chore: update packages list"
