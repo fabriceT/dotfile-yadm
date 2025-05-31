@@ -5,12 +5,13 @@ ansible-lint
 arc-gtk-theme
 arch-audit
 arch-install-scripts
-atuin
+awesome-terminal-fonts
 base
 bat
 bc
 beets
 bleachbit
+blueman
 bookworm
 brightnessctl
 broot
@@ -30,7 +31,7 @@ dog
 dotnet-sdk
 duf
 duperemove
-eog
+epiphany
 esptool
 etckeeper
 exfat-utils
@@ -38,14 +39,10 @@ f3
 fail2ban
 firefox-i18n-fr
 fisher
-foliate
-geary
 ghq
 gimp
 glances
 gnome-boxes
-gnome-builder
-gnome-font-viewer
 go-yq
 gobject-introspection
 gocryptfs
@@ -60,6 +57,7 @@ inetutils
 inkscape
 iotop
 isync
+labwc
 le
 libpam-google-authenticator
 libreoffice-still-fr
@@ -77,7 +75,6 @@ mkcert
 mkosi
 molecule-plugins
 nano
-nautilus
 ncdu
 niri
 nmap
@@ -113,10 +110,10 @@ sshfs
 swayidle
 syncthing
 syslinux
-telegram-desktop
 termv
 transmission-gtk
 trivy
+ttf-bitstream-vera-mono-nerd
 ttf-fira-code
 ttf-iosevka-nerd
 ttf-nerd-fonts-symbols
@@ -143,16 +140,10 @@ zoxide
 zramswap
 
 [pacman-deps]
-adobe-source-code-pro-fonts
-d-spy
 go
 nm-connection-editor
 sysfsutils
 ttf-opensans
-
-[flatpack]
-Flatseal	com.github.tchx84.Flatseal	2.3.0	stable
-DuckStation	org.duckstation.DuckStation	0.1-8153-g31c1cfa65	stable
 
 [stew]
 nektos/act@v0.2.65
@@ -192,18 +183,6 @@ oakninja/makemefish
 otms61/fish-pet
 patrickf1/fzf.fish
 veirt/web-search.fish
-
-[gox]
- [=!] Not using $XDG_DATA_HOME, env variable not present
- [=!] Using /home/phab/.local/share for data
- [=!] Using /home/phab/.local/share/gox/db for database
-┌────────────────┬──────────────────────────────────────────┬───────────────────────────────────────────────────────┐
-│  Package Name  │               Package Path               │                      Package URL                      │
-├────────────────┼──────────────────────────────────────────┼───────────────────────────────────────────────────────┤
-│  cowsay        │  /home/phab/.local/share/gox/bin/cowsay  │  github.com/Code-Hex/Neo-cowsay/cmd/v2/cowsay@latest  │
-│  gox           │  /home/phab/.local/share/gox/bin/gox     │  github.com/pspiagicw/gox@latest                      │
-│  nap           │  /home/phab/.local/share/gox/bin/nap     │  github.com/maaslalani/nap@latest                     │
-└────────────────┴──────────────────────────────────────────┴───────────────────────────────────────────────────────┘
 
 [aqua]
 fujiwara/tfstate-lookup v1.5.0
