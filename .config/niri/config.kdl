@@ -1,16 +1,38 @@
+
 // This config is in the KDL format: https://kdl.dev
 // "/-" comments out the following node.
 // Check the wiki for a full description of the configuration:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Introduction
 
-spawn-at-startup "xwayland-satellite"
+// This line starts waybar, a commonly used bar for Wayland compositors.
+spawn-at-startup "waybar"
+spawn-at-startup "mako"
+spawn-at-startup "swayidle" "-w" "timeout" "601" "niri msg action power-off-monitors" "timeout" "600" "swaylock -f" "before-sleep" "swaylock -f"
 
+// For X applications
+spawn-at-startup "xwayland-satellite"
 environment {
     DISPLAY ":0"
 }
 
-// Input device configuration.
-// Find the full list of options on the wiki:
+// Uncomment this line to ask the clients to omit their client-side decorations if possible.
+// If the client will specifically ask for CSD, the request will be honored.
+// Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
+// This option will also fix border/focus ring drawing behind some semitransparent windows.
+// After enabling or disabling this, you need to restart the apps for this to take effect.
+// prefer-no-csd
+
+// You can change the path where screenshots are saved.
+// A ~ at the front will be expanded to the home directory.
+// The path is formatted with strftime(3) to give you the screenshot date and time.
+screenshot-path "~/Images/Captures d’écran/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+// You can also set this to null to disable saving screenshots to disk.
+// screenshot-path null
+
+//******************************************************************************
+//                                 INPUTS
+//******************************************************************************
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Input
 input {
     keyboard {
@@ -22,9 +44,6 @@ input {
             layout "fr"
             // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
         }
-
-        // Enable numlock on startup, omitting this setting disables it.
-        // numlock
     }
 
     // Next sections include libinput settings.
@@ -69,18 +88,24 @@ input {
     // focus-follows-mouse max-scroll-amount="0%"
 }
 
+//******************************************************************************
+//                                 OUTPUTS
+//******************************************************************************
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
 // The built-in laptop monitor is usually called "eDP-1".
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
-// Remember to uncomment the node by removing "/-"!
+
 output "VGA-1" {
     mode "1920x1080@60"
     transform "normal"
     position x=0 y=0
 }
 
+//******************************************************************************
+//                                 LAYOUTS
+//******************************************************************************
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
@@ -94,19 +119,16 @@ layout {
         proportion 0.66667
     }
 
-    preset-window-heights { 
+    preset-window-heights {
     	proportion 0.33333
         proportion 0.5
         proportion 0.66667
         proportion 1.0
-        
+
     }
 
     // You can change the default width of the new windows.
     default-column-width {}
-
-    // If you leave the brackets empty, the windows themselves will decide their initial width.
-    // default-column-width {}
 
     // By default focus ring and border are rendered as a solid background rectangle
     // behind windows. That is, they will show up through semitransparent windows.
@@ -165,64 +187,47 @@ layout {
         // top 64
         // bottom 64
     }
+
+    // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout#tab-indicator
+    tab-indicator {
+        width 5
+        gap 4
+        position "left"
+        place-within-column
+        hide-when-single-tab
+    }
 }
 
-// Add lines like this to spawn processes at startup.
-// Note that running niri as a session supports xdg-desktop-autostart,
-// which may be more convenient to use.
-// See the binds section below for more spawn examples.
-
-// This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "waybar"
-spawn-at-startup "mako"
-spawn-at-startup "swayidle" "-w" "timeout" "601" "niri msg action power-off-monitors" "timeout" "600" "swaylock -f" "before-sleep" "swaylock -f"
-
-// Uncomment this line to ask the clients to omit their client-side decorations if possible.
-// If the client will specifically ask for CSD, the request will be honored.
-// Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
-// This option will also fix border/focus ring drawing behind some semitransparent windows.
-// After enabling or disabling this, you need to restart the apps for this to take effect.
-// prefer-no-csd
-
-// You can change the path where screenshots are saved.
-// A ~ at the front will be expanded to the home directory.
-// The path is formatted with strftime(3) to give you the screenshot date and time.
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
-
-// You can also set this to null to disable saving screenshots to disk.
-// screenshot-path null
-
-// Animation settings.
-// The wiki explains how to configure individual animations:
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Animations
-animations {
-    // Uncomment to turn off all animations.
-    // off
-
-    // Slow down all animations by this factor. Values below 1 speed them up instead.
-    // slowdown 3.0
+//******************************************************************************
+//                                 LAYER RULES
+//******************************************************************************
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Layer-Rules
+// Make fuzzel semitransparent.
+layer-rule {
+    match namespace="^launcher$"
+    opacity 0.85
+    shadow {
+            on
+            softness 10
+            spread 5
+            offset x=0 y=5
+            draw-behind-window true
+            color "#00000064"
+        }
 }
 
-// Window rules let you adjust behavior for individual windows.
-// Find more information on the wiki:
+//******************************************************************************
+//                                 WINDOW RULES
+//******************************************************************************
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
 
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
+// Open some windows as floating by default.
 window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
-
-// Open the Firefox picture-in-picture player as floating by default.
-window-rule {
-    // This app-id regular expression will work for both:
-    // - host Firefox (app-id is "firefox")
-    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id=r#"firefox$"# title="^Incrustation vidéo$"
+    match app-id="org.pulseaudio.pavucontrol"
+
+
     open-floating true
 }
 
@@ -230,11 +235,18 @@ window-rule {
 window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
-
     block-out-from "screen-capture"
 
     // Use this instead if you want them visible on third-party screenshot tools.
     // block-out-from "screencast"
+}
+
+
+// KeepassXC popup windows with focus
+window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match is-floating=true
+    open-focused true
 }
 
 // Example: enable rounded corners for all windows.
@@ -244,6 +256,34 @@ window-rule {
     clip-to-geometry true
 }
 
+//******************************************************************************
+//                                 ANIMATIONS
+//******************************************************************************
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Animations
+animations {
+    // Uncomment to turn off all animations.
+    // off
+
+    // Slow down all animations by this factor. Values below 1 speed them up instead.
+    // slowdown 3.0
+}
+
+//******************************************************************************
+//                                 OVERVIEW
+//******************************************************************************
+// https://github.com/YaLTeR/niri/wiki/Overview
+overview {
+    zoom 0.4
+    backdrop-color "#262626"
+
+    workspace-shadow {
+        off
+    }
+}
+
+//******************************************************************************
+//                                 BINDS
+//******************************************************************************
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
     // in the end. To find an XKB name for a particular key, you may use a program
@@ -263,10 +303,6 @@ binds {
     Mod+X       hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
-    // You can also use a shell. Do this if you need pipes, multiple commands, etc.
-    // Note: the entire command goes as a single argument in the end.
-    // Mod+T { spawn "bash" "-c" "notify-send hello && exec alacritty"; }
-
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
@@ -281,6 +317,7 @@ binds {
 
     Mod+Q { close-window; }
 
+    // Navigation
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
     Mod+Up    { focus-window-up; }
@@ -417,14 +454,7 @@ binds {
     // Center all fully visible columns on screen.
     Mod+Ctrl+C { center-visible-columns; }
 
-    // Finer width adjustments.
-    // This command can also:
-    // * set width in pixels: "1000"
-    // * adjust width in pixels: "-5" or "+5"
-    // * set width as a percentage of screen width: "25%"
-    // * adjust width as a percentage of screen width: "-10%" or "+10%"
-    // Pixel sizes use logical, or scaled, pixels. I.e. on an output with scale 2.0,
-    // set-column-width "100" will make the column occupy 200 physical screen pixels.
+    // resize column
     Mod+Minus { set-column-width "-10%"; }
     Mod+Equal { set-column-width "+10%"; }
 
@@ -469,5 +499,5 @@ binds {
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
-    Mod+Shift+P { power-off-monitors; } 
+    Mod+Shift+P { power-off-monitors; }
 }
