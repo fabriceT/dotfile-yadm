@@ -226,6 +226,7 @@ window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     match app-id=r#"firefox$"# title="^Incrustation vidéo$"
     match app-id="org.pulseaudio.pavucontrol"
+    match app-id="opensnitch_ui"
 
 
     open-floating true
