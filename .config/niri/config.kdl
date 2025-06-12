@@ -227,6 +227,7 @@ window-rule {
     match app-id=r#"firefox$"# title="^Incrustation vidéo$"
     match app-id="org.pulseaudio.pavucontrol"
     match app-id="opensnitch_ui"
+    match app-id="blueman-manager"
 
 
     open-floating true
