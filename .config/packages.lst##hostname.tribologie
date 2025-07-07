@@ -31,6 +31,7 @@ dog
 dotnet-sdk
 duf
 duperemove
+easytag
 epiphany
 esptool
 etckeeper
@@ -39,6 +40,8 @@ f3
 fail2ban
 firefox-i18n-fr
 fisher
+flatpak
+font-manager
 ghq
 gimp
 glances
@@ -57,6 +60,8 @@ inetutils
 inkscape
 iotop
 isync
+k9s
+kubectx
 labwc
 le
 libpam-google-authenticator
@@ -71,6 +76,7 @@ lynis
 mc
 micro
 minder
+minikube
 mkcert
 mkosi
 molecule-plugins
@@ -95,6 +101,7 @@ php-sqlite
 pngquant
 powerline-fonts
 powershell-bin
+powertop
 pre-commit
 restic
 rsync
@@ -110,6 +117,7 @@ sshfs
 swayidle
 syncthing
 syslinux
+teams
 termv
 transmission-gtk
 trivy
@@ -144,6 +152,10 @@ go
 nm-connection-editor
 sysfsutils
 ttf-opensans
+
+[flatpack]
+Flatseal	com.github.tchx84.Flatseal	2.3.0	stable
+DuckStation	org.duckstation.DuckStation	0.1-8153-g31c1cfa65	stable
 
 [stew]
 nektos/act@v0.2.65
@@ -193,3 +205,4 @@ slsa-framework/slsa-verifier v2.7.0
 version-fox/vfox v0.6.0
 iawia002/lux v0.24.1
 terramate-io/terramate v0.12.1
+knqyf263/pet v1.0.1
