@@ -10,12 +10,13 @@ arch-install-scripts
 aspell-fr
 astyle
 at
-atuin
 bat
 bc
 bees
 beets
 bleachbit
+blueman
+bluetui
 bluez-utils
 bogofilter-db
 bridge-utils
@@ -26,24 +27,25 @@ chaotic-keyring
 chaotic-mirrorlist
 charm
 clamav
-cloudflare-warp-bin
 cocogitto
 croc
 cryfs
-cryptomator-bin
 cue
 d2
 db
 dconf-editor
+deadbeef
+debootstrap
+devhelp
 dialog
 distrobox
 dive
 dnf5
 dotnet-sdk
 duperemove
+epiphany
 esptool
 etckeeper
-evolution
 eza
 f3
 fail2ban
@@ -58,8 +60,6 @@ foremost
 fq
 freecad
 freetube
-fuzzel
-gdm
 ghidra
 ghq
 gimp
@@ -67,36 +67,27 @@ git-cliff
 git-crypt
 git-delta
 git-extras
+git-graph
+git-town
+github-cli
 gitleaks
 gitui
 glances
 glow
-gnome-2048
 gnome-boxes
 gnome-break-timer
-gnome-browser-connector
 gnome-builder
-gnome-calendar
-gnome-clocks
+gnome-commander
 gnome-devel-docs
 gnome-epub-thumbnailer
-gnome-icon-theme-symbolic
-gnome-logs
-gnome-maps
-gnome-pomodoro-git
-gnome-shell-extensions
-gnome-tweaks
-gnome-weather
 gnu-netcat
 go-task
 go-tools
 go-yq
 gobuster
-gopass
 goreleaser
 gotify-cli
 gparted
-gthumb
 gtk3-docs
 gtk4-docs
 gucharmap
@@ -114,7 +105,6 @@ incus
 inetutils
 inkscape
 intel-ucode
-inxi
 iotop
 isync
 jc
@@ -128,19 +118,20 @@ libpam-google-authenticator
 libreoffice-still-fr
 libsecret-docs
 libusb-compat
+libxcrypt-compat
 lighttpd
 linux
 linux-headers
 linux-lts
 linux-lts-headers
 lite-xl
-logrotate
 lpm
 lshw
 lua-lgi
 luacheck
 luanti
 luarocks
+ly
 lynis
 man-pages
 man-pages-fr
@@ -158,9 +149,12 @@ molecule-plugins
 most
 nano
 ncdu
+niri
 nmap
 noto-fonts-emoji
+nwg-look
 onedriver
+opensnitch
 openttd
 optipng
 osmo
@@ -168,15 +162,15 @@ otf-exo
 otf-fira-mono
 otf-fira-sans
 otf-firamono-nerd
-otf-font-awesome
 otf-hermit
 otf-inconsolata-dz-powerline
 otf-mintspirit
+oxipng
 pacutils
 parallel
+pavucontrol
 pcmanfm-gtk3
 php-cgi
-php-gd
 picocom
 pixbuf-webp-thumbnailer
 pngcrush
@@ -185,7 +179,6 @@ popeye
 powerline-fonts
 powershell-bin
 powertop
-pragha
 pre-commit
 privoxy
 promtail
@@ -195,7 +188,6 @@ python-pygobject-stubs
 regextester
 remmina
 restic
-rhythmbox
 ripgrep
 rtl_433
 sakura
@@ -203,14 +195,16 @@ serf-cluster
 shellharden
 shortwave
 skate
+smartmontools
 sops
 soundconverter
 splint
+spotube-bin
 sqlite-doc
 ssh-audit
 ssh-vault
 sshfs
-superfile-bin
+superfile
 sway
 syncthing
 sysstat
@@ -225,6 +219,7 @@ terragrunt
 testdisk
 tflint
 thunderbird
+tig
 tlock
 tracer
 transmission-gtk
@@ -233,20 +228,25 @@ ttf-bitstream-vera-mono-nerd
 ttf-comfortaa
 ttf-fira-code
 ttf-gentium-plus
+ttf-inconsolata-nerd
 ttf-junicode
 ttf-linux-libertine
 ttf-nerd-fonts-symbols
 ttf-symbola
 ttf-ubuntu-font-family
+usbguard-notifier
 uv
 vala-language-server
 vala-lint-git
 vhs
 vi
+viewnior
 visual-studio-code-bin
 vivaldi
+wayland-utils
 webhook
 wesnoth
+wev
 wireguard-tools
 wireshark-qt
 woff-fira-code
@@ -260,36 +260,26 @@ zoxide
 zramswap
 
 [pacman-deps]
-adobe-source-code-pro-fonts
-d-spy
+grub
 nm-connection-editor
 ttf-opensans
 
 [flatpack]
-Flatseal	com.github.tchx84.Flatseal	2.3.0	stable
-Nitrokey App2	com.nitrokey.nitrokey-app2	2.3.3	stable
-Blanket	com.rafaelmardojai.Blanket	0.7.0	stable
-Seabird	dev.skynomads.Seabird	v0.5.1	stable
-Flatsweep	io.github.giantpinkrobots.flatsweep	v2024.12.23	stable
-Paramètres de GDM	io.github.realmazharhussain.GdmSettings	5.0	stable
-DuckStation	org.duckstation.DuckStation	0.1-8773-ga1d69982f	stable
 
 [stew]
 nektro/mtorrent@v4
-Konloch/bytecode-viewer@v2.13.0
+Konloch/bytecode-viewer@v2.13.1
 qarmin/czkawka@7.0.0
 aelsabbahy/goss@v0.4.8
 cube2222/octosql@v0.13.0
-Forceu/Gokapi@v1.9.6
-WithSecureLabs/chainsaw@v2.11.0
+Forceu/Gokapi@v2.0.1
+WithSecureLabs/chainsaw@v2.12.2
 DCSO/bloom@v0.2.4
-shenwei356/csvtk@v0.30.0
-ansible-semaphore/semaphore@v2.10.22
+shenwei356/csvtk@v0.34.0
+ansible-semaphore/semaphore@v2.15.0
 alanxoc3/concards@v0.9.0
 owenrumney/lazytrivy@v1.0.2
 mgdm/htmlq@v0.4.0
-quantumsheep/sshs@4.5.1
-pspiagicw/gox@v0.0.2
 
 [fisher]
 alaz-oz/fish-insulter
@@ -310,21 +300,52 @@ otms61/fish-pet
 patrickf1/fzf.fish
 veirt/web-search.fish
 
+[gox]
+ [=!] Not using $XDG_DATA_HOME, env variable not present
+ [=!] Using /home/phab/.local/share for data
+ [=!] Using /home/phab/.local/share/gox/db for database
+┌────────────────┬────────────────────────────────────────────┬───────────────────────────────────────────────────────┐
+│  Package Name  │                Package Path                │                      Package URL                      │
+├────────────────┼────────────────────────────────────────────┼───────────────────────────────────────────────────────┤
+│  gorun         │  /home/phab/.local/share/gox/bin/gorun     │  github.com/erning/gorun@latest                       │
+│  lux           │  /home/phab/.local/share/gox/bin/lux       │  github.com/iawia002/lux@v0.24.1                      │
+│  nap           │  /home/phab/.local/share/gox/bin/nap       │  github.com/maaslalani/nap@latest                     │
+│  repoctl       │  /home/phab/.local/share/gox/bin/repoctl   │  github.com/cassava/repoctl@v0.22.2                   │
+│  serf          │  /home/phab/.local/share/gox/bin/serf      │  github.com/hashicorp/serf/cmd/serf@v0.10.2           │
+│  devtui        │  /home/phab/.local/share/gox/bin/devtui    │  github.com/skatkov/devtui@latest                     │
+│  enola         │  /home/phab/.local/share/gox/bin/enola     │  github.com/theyahya/enola/cmd/enola@latest           │
+│  gox           │  /home/phab/.local/share/gox/bin/gox       │  github.com/pspiagicw/gox@latest                      │
+│  landrun       │  /home/phab/.local/share/gox/bin/landrun   │  github.com/zouuup/landrun/cmd/landrun@latest         │
+│  pet           │  /home/phab/.local/share/gox/bin/pet       │  github.com/knqyf263/pet@latest                       │
+│  qemantra      │  /home/phab/.local/share/gox/bin/qemantra  │  github.com/pspiagicw/qemantra@v0.2.3                 │
+│  whois         │  /home/phab/.local/share/gox/bin/whois     │  github.com/likexian/whois/cmd/whois@latest           │
+│  trex          │  /home/phab/.local/share/gox/bin/trex      │  github.com/samyakbardiya/trex@latest                 │
+│  air           │  /home/phab/.local/share/gox/bin/air       │  github.com/air-verse/air@latest                      │
+│  cowsay        │  /home/phab/.local/share/gox/bin/cowsay    │  github.com/Code-Hex/Neo-cowsay/cmd/v2/cowsay@v2.0.4  │
+│  gosuki        │  /home/phab/.local/share/gox/bin/gosuki    │  github.com/blob42/gosuki/cmd/gosuki@latest           │
+│  sake          │  /home/phab/.local/share/gox/bin/sake      │  github.com/alajmo/sake@latest                        │
+│  doggo         │  /home/phab/.local/share/gox/bin/doggo     │  github.com/mr-karan/doggo/cmd/doggo@latest           │
+│  goeval        │  /home/phab/.local/share/gox/bin/goeval    │  github.com/dolmen-go/goeval@latest                   │
+│  gokey         │  /home/phab/.local/share/gox/bin/gokey     │  github.com/cloudflare/gokey/cmd/gokey@v0.1.3         │
+└────────────────┴────────────────────────────────────────────┴───────────────────────────────────────────────────────┘
+
 [aqua]
 tfmigrator/cli v0.2.2
 fiatjaf/jiq v0.7.2
 fujiwara/tfstate-lookup v1.6.0
-projectdiscovery/naabu v2.3.4
-aquasecurity/tfsec v1.28.13
+projectdiscovery/naabu v2.3.5
+aquasecurity/tfsec v1.28.14
 minamijoyo/tfschema v0.7.9
-minamijoyo/tfupdate v0.8.5
+minamijoyo/tfupdate v0.9.1
 cheat/cheat 4.4.2
 jesseduffield/lazydocker v0.24.1
 TomWright/dasel v2.8.1
-golangci/golangci-lint v2.1.5
-version-fox/vfox v0.6.6
-numtide/treefmt v2.2.1
+golangci/golangci-lint v2.2.2
+version-fox/vfox v0.6.10
+numtide/treefmt v2.3.1
 knqyf263/pet v1.0.1
-derailed/k9s v0.50.4
+derailed/k9s v0.50.9
 ynqa/jnv v0.6.0
 takaishi/tfclean v0.0.9
+Wilfred/difftastic 0.64.0
+quantumsheep/sshs 4.7.2
