@@ -56,6 +56,8 @@ htop
 hunspell-fr
 hyphen-fr
 imapfilter
+incus
+incus-ui
 inetutils
 inkscape
 iotop
@@ -96,7 +98,6 @@ pacman-contrib
 pavucontrol
 pcmanfm-gtk3
 php-cgi
-php-gd
 php-sqlite
 pngquant
 powerline-fonts
@@ -104,7 +105,6 @@ powershell-bin
 powertop
 pre-commit
 restic
-rsync
 rtl_433
 sakura
 sc
@@ -117,8 +117,8 @@ sshfs
 swayidle
 syncthing
 syslinux
-teams
 termv
+tig
 transmission-gtk
 trivy
 ttf-bitstream-vera-mono-nerd
