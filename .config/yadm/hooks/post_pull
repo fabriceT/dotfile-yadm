@@ -56,7 +56,7 @@ export_pacman
 export_flatpak
 export_stew
 export_fisher
-#export_gox
+export_gox
 export_aqua
 
 

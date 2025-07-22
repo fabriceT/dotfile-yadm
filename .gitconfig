@@ -47,6 +47,7 @@
 
 [safe]
     directory = /etc/ansible
+	directory = *
 
 [alias]
     fus = push --force
@@ -98,3 +99,7 @@
 [ghq "https://github.com/melodie11/"]
     vcs = git
     root = ~/Documents/Développement/Divers
+[receive]
+	advertisePushOptions = true
+[hub]
+	protocol = https

@@ -35,3 +35,5 @@ abbr -a osquerya osqueryi --nodisable_audit --nodisable_events --audit_allow_con
 
 abbr -a act act --bind --container-daemon-socket {$XDG_RUNTIME_DIR}/podman/podman.sock
 abbr -a spf superfile
+
+abbr -a tm trash-put
