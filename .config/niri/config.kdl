@@ -7,6 +7,7 @@
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
 spawn-at-startup "mako"
+spawn-at-startup "wlsunset" "-L" "6.8" "-l" "47.4"
 spawn-at-startup "swayidle" "-w" "timeout" "601" "niri msg action power-off-monitors" "timeout" "600" "swaylock -f" "before-sleep" "swaylock -f"
 
 // For X applications
