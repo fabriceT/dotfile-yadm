@@ -12,8 +12,6 @@ zoxide init fish | source
 # version-fox
 vfox activate fish | source
 
-tv init fish | source
-
 set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/gcr/ssh
 set -gx MOZ_ENABLE_WAYLAND 1
 set -gx EDITOR micro
