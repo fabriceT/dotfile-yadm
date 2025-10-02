@@ -243,9 +243,10 @@ layer-rule {
 window-rule {
     match app-id="firefox" title="^Picture-in-Picture$"
     match app-id="firefox" title="^Incrustation vidéo$"
-    match app-id="org.pulseaudio.pavucontrol"
+    // match app-id="org.pulseaudio.pavucontrol"
     match app-id="opensnitch_ui"
-    match app-id="blueman-manager"
+    // match app-id="blueman-manager"
+    match app-id="mpv"
 
     open-floating true
 }
@@ -286,6 +287,11 @@ window-rule {
 window-rule {
     match is-floating=false app-id="firefox"
     open-on-workspace "int"
+}
+
+window-rule {
+    match is-floating=false app-id="Code"
+    open-on-workspace "dev"
 }
 
 //******************************************************************************
@@ -332,7 +338,8 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return  hotkey-overlay-title="Open a Terminal: sakura" { spawn "sakura"; }
-    Mod+X       hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+X       hotkey-overlay-title="Run application" { spawn "fuzzel"; }
+    Mod+Ctrl+X  hotkey-overlay-title="Select application" { spawn "niri_fuzzel_switcher"; }
     Mod+L       hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock" "-i" "~/Images/86bca5e4090bcf7111c59c41a3c958be.jpg"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
