@@ -1,14 +1,15 @@
 [pacman-explicit]
+act
 adapta-gtk-theme
 age
 ansible-lint
 arc-gtk-theme
 arch-audit
 arch-install-scripts
+atuin
 awesome-terminal-fonts
 base
 bat
-bc
 beets
 bleachbit
 blueman
@@ -19,6 +20,7 @@ chaotic-keyring
 chaotic-mirrorlist
 charm
 clamav
+clonezilla
 consul
 croc
 cryfs
@@ -44,8 +46,10 @@ flatpak
 font-manager
 ghq
 gimp
+gitui
 glances
 gnome-boxes
+go-task
 go-yq
 gobject-introspection
 gocryptfs
@@ -65,15 +69,16 @@ isync
 k9s
 kubectx
 labwc
+lazydocker
 le
 libpam-google-authenticator
 libreoffice-still-fr
-libxcrypt-compat
 lightdm-gtk-greeter-settings
 lighttpd
 linux-headers
 linux-lts
 lua-lgi-git
+ly
 lynis
 mc
 micro
@@ -96,7 +101,6 @@ otf-fira-mono
 otf-firamono-nerd
 pacman-contrib
 pavucontrol
-pcmanfm-gtk3
 php-cgi
 php-sqlite
 pngquant
@@ -111,12 +115,13 @@ sc
 serf-cluster
 shellcheck
 skate
+soundconverter
 sqlite-doc
 sqlitestudio-plugins
-sshfs
 swayidle
 syncthing
 syslinux
+television
 termv
 tig
 transmission-gtk
@@ -135,10 +140,12 @@ virt-viewer
 visual-studio-code-bin
 vivaldi
 wayland-utils
+webp-pixbuf-loader
 wev
 wireguard-tools
 wireless_tools
 wireshark-qt
+wlsunset
 yadm
 yara
 yay
@@ -158,19 +165,15 @@ Flatseal	com.github.tchx84.Flatseal	2.3.0	stable
 DuckStation	org.duckstation.DuckStation	0.1-8153-g31c1cfa65	stable
 
 [stew]
-nektos/act@v0.2.65
 projectdiscovery/notify@v1.0.6
 nektro/mtorrent@v4
 aelsabbahy/goss@v0.4.4
 alajmo/sake@v0.15.1
-go-task/task@v3.38.0
 adnanh/webhook@2.8.1
 joewalnes/websocketd@v0.4.1
-alexhallam/tv@1.5.2
 TomWright/dasel@v2.4.1
 dandavison/delta@0.17.0
 mgdm/htmlq@v0.4.0
-jesseduffield/lazydocker@v0.23.3
 alajmo/mani@v0.25.0
 stashapp/stash@v0.24.0
 aquaproj/aqua@v2.30.0
@@ -196,7 +199,20 @@ otms61/fish-pet
 patrickf1/fzf.fish
 veirt/web-search.fish
 
+[gox]
+ [=!] Not using $XDG_DATA_HOME, env variable not present
+ [=!] Using /home/phab/.local/share for data
+ [=!] Using /home/phab/.local/share/gox/db for database
+┌────────────────┬──────────────────────────────────────────┬───────────────────────────────────────────────────────┐
+│  Package Name  │               Package Path               │                      Package URL                      │
+├────────────────┼──────────────────────────────────────────┼───────────────────────────────────────────────────────┤
+│  cowsay        │  /home/phab/.local/share/gox/bin/cowsay  │  github.com/Code-Hex/Neo-cowsay/cmd/v2/cowsay@latest  │
+│  gox           │  /home/phab/.local/share/gox/bin/gox     │  github.com/pspiagicw/gox@latest                      │
+│  nap           │  /home/phab/.local/share/gox/bin/nap     │  github.com/maaslalani/nap@latest                     │
+└────────────────┴──────────────────────────────────────────┴───────────────────────────────────────────────────────┘
+
 [aqua]
+fiatjaf/jiq v0.7.2
 fujiwara/tfstate-lookup v1.5.0
 minamijoyo/tfschema v0.7.9
 minamijoyo/tfupdate v0.8.5
