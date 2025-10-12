@@ -1,0 +1,8 @@
+[metadata]
+name = "ollama-models"
+description = "list ollama models"
+requirements=["ollama"]
+
+[source]
+command = "ollama list | tail +2"
+output = "{trim|replace:s/\\s+/ /g|split: :0}"

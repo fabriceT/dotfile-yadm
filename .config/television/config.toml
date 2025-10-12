@@ -251,7 +251,13 @@ fallback_channel = "files"
 "git-log" = ["git log", "git show"]
 "docker-images" = ["docker run"]
 "git-repos" = ["nvim", "code", "hx", "git clone"]
-
+"ollama-models" = [
+  "ollama show",
+  "ollama run",
+  "ollama stop",
+  "ollama cp",
+  "ollama rm",
+]
 
 [shell_integration.keybindings]
 # controls which key binding should trigger tv
