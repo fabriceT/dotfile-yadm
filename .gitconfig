@@ -99,6 +99,11 @@
 [ghq "https://github.com/melodie11/"]
     vcs = git
     root = ~/Documents/Développement/Divers
+
+[ghq "https://github.com/fabriceT"]
+    vcs = git
+    root = ~/Documents/Développement/Divers
+
 [receive]
 	advertisePushOptions = true
 [hub]
