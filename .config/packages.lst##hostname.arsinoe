@@ -11,10 +11,11 @@ aspell-fr
 astyle
 at
 bat
-bats
+bats-file
 bc
 bees
 beets
+betterbird-bin
 bleachbit
 blueman
 bluetui
@@ -66,6 +67,7 @@ fq
 freecad
 freetube
 ghidra
+ghostty
 ghq
 gimp
 git-cliff
@@ -102,7 +104,6 @@ helix
 helm
 htmlq
 htop
-hunspell-fr
 hyphen-fr
 imapfilter
 incus
@@ -118,12 +119,15 @@ just-lsp
 kube-linter
 kubectx
 lazygit
+lazyjournal
 le
 lftp
 libpam-google-authenticator
 libreoffice-still-fr
+librewolf
 libsecret-docs
 libusb-compat
+libva-utils
 libxcrypt-compat
 lighttpd
 linux
@@ -144,6 +148,7 @@ man-pages-fr
 mani
 mariadb
 markdownlint-cli2
+mate-icon-theme
 mc
 memtest86+
 micro
@@ -153,12 +158,14 @@ mkcert
 mkosi
 molecule-plugins
 most
+musl
 nano
 ncdu
 niri
 nmap
 noto-fonts-emoji
 nwg-look
+ollama
 onedriver
 opensnitch
 openttd
@@ -180,6 +187,7 @@ picocom
 pixbuf-webp-thumbnailer
 pngcrush
 pngquant
+polkit-gnome
 popeye
 powerline-fonts
 powershell-bin
@@ -190,6 +198,7 @@ promtail
 pwgen
 python-gobject-docs
 python-pygobject-stubs
+rclone
 regextester
 remmina
 restic
@@ -202,7 +211,6 @@ serf-cluster
 shellharden
 shortwave
 skate
-smartmontools
 sops
 soundconverter
 splint
@@ -218,6 +226,7 @@ sysstat
 talosctl
 tea
 tealdeer
+tela-circle-icon-theme-standard
 telegram-desktop
 television
 terminus-font
@@ -228,6 +237,7 @@ tflint
 thunderbird
 tig
 tlock
+topgrade
 tracer
 transmission-gtk
 trivy
@@ -250,6 +260,7 @@ vi
 viewnior
 visual-studio-code-bin
 vivaldi
+vlang-bin
 wayland-utils
 webhook
 wesnoth
@@ -268,24 +279,22 @@ zoxide
 zramswap
 
 [pacman-deps]
+cantarell-fonts
 nm-connection-editor
 ttf-opensans
 
 [flatpack]
+Flatseal	com.github.tchx84.Flatseal	2.4.0	stable
+Alpaca	com.jeffser.Alpaca	8.5.0	stable
+Nitrokey App2	com.nitrokey.nitrokey-app2	2.4.3	stable
+Blanket	com.rafaelmardojai.Blanket	0.8.0	stable
+Bouteilles	com.usebottles.bottles	60	stable
+Seabird	dev.skynomads.Seabird	v0.6.0	stable
+Flatsweep	io.github.giantpinkrobots.flatsweep	v2025.10.7	stable
+Paramètres de GDM	io.github.realmazharhussain.GdmSettings	5.0	stable
+DuckStation	org.duckstation.DuckStation	0.1-9482-g0a53bc47c	stable
 
 [stew]
-Konloch/bytecode-viewer@v2.13.1
-qarmin/czkawka@7.0.0
-aelsabbahy/goss@v0.4.8
-cube2222/octosql@v0.13.0
-Forceu/Gokapi@v2.0.1
-WithSecureLabs/chainsaw@v2.12.2
-DCSO/bloom@v0.2.4
-shenwei356/csvtk@v0.34.0
-ansible-semaphore/semaphore@v2.15.0
-alanxoc3/concards@v0.9.0
-owenrumney/lazytrivy@v1.0.2
-mgdm/htmlq@v0.4.0
 
 [fisher]
 alaz-oz/fish-insulter
@@ -311,49 +320,54 @@ veirt/web-search.fish
  [=!] Not using $XDG_DATA_HOME, env variable not present
  [=!] Using /home/phab/.local/share for data
  [=!] Using /home/phab/.local/share/gox/db for database
-┌────────────────┬────────────────────────────────────────────┬───────────────────────────────────────────────────────┐
-│  Package Name  │                Package Path                │                      Package URL                      │
-├────────────────┼────────────────────────────────────────────┼───────────────────────────────────────────────────────┤
-│  qemantra      │  /home/phab/.local/share/gox/bin/qemantra  │  github.com/pspiagicw/qemantra@v0.2.3                 │
-│  serf          │  /home/phab/.local/share/gox/bin/serf      │  github.com/hashicorp/serf/cmd/serf@v0.10.2           │
-│  trex          │  /home/phab/.local/share/gox/bin/trex      │  github.com/samyakbardiya/trex@latest                 │
-│  cowsay        │  /home/phab/.local/share/gox/bin/cowsay    │  github.com/Code-Hex/Neo-cowsay/cmd/v2/cowsay@v2.0.4  │
-│  goeval        │  /home/phab/.local/share/gox/bin/goeval    │  github.com/dolmen-go/goeval@latest                   │
-│  gokey         │  /home/phab/.local/share/gox/bin/gokey     │  github.com/cloudflare/gokey/cmd/gokey@v0.1.3         │
-│  nap           │  /home/phab/.local/share/gox/bin/nap       │  github.com/maaslalani/nap@latest                     │
-│  whois         │  /home/phab/.local/share/gox/bin/whois     │  github.com/likexian/whois/cmd/whois@latest           │
-│  air           │  /home/phab/.local/share/gox/bin/air       │  github.com/air-verse/air@latest                      │
-│  doggo         │  /home/phab/.local/share/gox/bin/doggo     │  github.com/mr-karan/doggo/cmd/doggo@latest           │
-│  enola         │  /home/phab/.local/share/gox/bin/enola     │  github.com/theyahya/enola/cmd/enola@latest           │
-│  gox           │  /home/phab/.local/share/gox/bin/gox       │  github.com/pspiagicw/gox@latest                      │
-│  pet           │  /home/phab/.local/share/gox/bin/pet       │  github.com/knqyf263/pet@latest                       │
-│  repoctl       │  /home/phab/.local/share/gox/bin/repoctl   │  github.com/cassava/repoctl@v0.22.2                   │
-│  sake          │  /home/phab/.local/share/gox/bin/sake      │  github.com/alajmo/sake@latest                        │
-│  devtui        │  /home/phab/.local/share/gox/bin/devtui    │  github.com/skatkov/devtui@latest                     │
-│  gosuki        │  /home/phab/.local/share/gox/bin/gosuki    │  github.com/blob42/gosuki/cmd/gosuki@latest           │
-│  lefthook      │  /home/phab/.local/share/gox/bin/lefthook  │  github.com/evilmartians/lefthook@latest              │
-│  gorun         │  /home/phab/.local/share/gox/bin/gorun     │  github.com/erning/gorun@latest                       │
-│  landrun       │  /home/phab/.local/share/gox/bin/landrun   │  github.com/zouuup/landrun/cmd/landrun@latest         │
-│  lux           │  /home/phab/.local/share/gox/bin/lux       │  github.com/iawia002/lux@v0.24.1                      │
-└────────────────┴────────────────────────────────────────────┴───────────────────────────────────────────────────────┘
+┌──────────────────┬──────────────────────────────────────────────────┬───────────────────────────────────────────────────────┐
+│   Package Name   │                   Package Path                   │                      Package URL                      │
+├──────────────────┼──────────────────────────────────────────────────┼───────────────────────────────────────────────────────┤
+│  serf            │  /home/phab/.local/share/gox/bin/serf            │  github.com/hashicorp/serf/cmd/serf@v0.10.2           │
+│  fortunecraft    │  /home/phab/.local/share/gox/bin/fortunecraft    │  github.com/xyproto/fortunecraft@latest               │
+│  gokey           │  /home/phab/.local/share/gox/bin/gokey           │  github.com/cloudflare/gokey/cmd/gokey@v0.1.3         │
+│  gorun           │  /home/phab/.local/share/gox/bin/gorun           │  github.com/erning/gorun@latest                       │
+│  lefthook        │  /home/phab/.local/share/gox/bin/lefthook        │  github.com/evilmartians/lefthook@latest              │
+│  nap             │  /home/phab/.local/share/gox/bin/nap             │  github.com/maaslalani/nap@latest                     │
+│  air             │  /home/phab/.local/share/gox/bin/air             │  github.com/air-verse/air@latest                      │
+│  checkmake       │  /home/phab/.local/share/gox/bin/checkmake       │  github.com/checkmake/checkmake/cmd/checkmake@latest  │
+│  cowsay          │  /home/phab/.local/share/gox/bin/cowsay          │  github.com/Code-Hex/Neo-cowsay/cmd/v2/cowsay@v2.0.4  │
+│  devtui          │  /home/phab/.local/share/gox/bin/devtui          │  github.com/skatkov/devtui@latest                     │
+│  gox             │  /home/phab/.local/share/gox/bin/gox             │  github.com/pspiagicw/gox@latest                      │
+│  landrun         │  /home/phab/.local/share/gox/bin/landrun         │  github.com/zouuup/landrun/cmd/landrun@latest         │
+│  qemantra        │  /home/phab/.local/share/gox/bin/qemantra        │  github.com/pspiagicw/qemantra@v0.2.3                 │
+│  trex            │  /home/phab/.local/share/gox/bin/trex            │  github.com/samyakbardiya/trex@latest                 │
+│  doggo           │  /home/phab/.local/share/gox/bin/doggo           │  github.com/mr-karan/doggo/cmd/doggo@latest           │
+│  enola           │  /home/phab/.local/share/gox/bin/enola           │  github.com/theyahya/enola/cmd/enola@latest           │
+│  goeval          │  /home/phab/.local/share/gox/bin/goeval          │  github.com/dolmen-go/goeval@latest                   │
+│  repoctl         │  /home/phab/.local/share/gox/bin/repoctl         │  github.com/cassava/repoctl@v0.22.2                   │
+│  sake            │  /home/phab/.local/share/gox/bin/sake            │  github.com/alajmo/sake@latest                        │
+│  tf-summarize    │  /home/phab/.local/share/gox/bin/tf-summarize    │  github.com/dineshba/tf-summarize@latest              │
+│  whois           │  /home/phab/.local/share/gox/bin/whois           │  github.com/likexian/whois/cmd/whois@latest           │
+│  go-mod-upgrade  │  /home/phab/.local/share/gox/bin/go-mod-upgrade  │  github.com/oligot/go-mod-upgrade@latest              │
+│  gosuki          │  /home/phab/.local/share/gox/bin/gosuki          │  github.com/blob42/gosuki/cmd/gosuki@latest           │
+│  lux             │  /home/phab/.local/share/gox/bin/lux             │  github.com/iawia002/lux@v0.24.1                      │
+│  pet             │  /home/phab/.local/share/gox/bin/pet             │  github.com/knqyf263/pet@latest                       │
+└──────────────────┴──────────────────────────────────────────────────┴───────────────────────────────────────────────────────┘
 
 [aqua]
 tfmigrator/cli v0.2.2
 fiatjaf/jiq v0.7.2
-fujiwara/tfstate-lookup v1.7.1
-projectdiscovery/naabu v2.3.5
+fujiwara/tfstate-lookup v1.8.1
+projectdiscovery/naabu v2.3.7
 aquasecurity/tfsec v1.28.14
 minamijoyo/tfschema v0.7.9
-minamijoyo/tfupdate v0.9.2
+minamijoyo/tfupdate v0.9.3
 cheat/cheat 4.4.2
-jesseduffield/lazydocker v0.24.1
-TomWright/dasel v2.8.1
-golangci/golangci-lint v2.5.0
-version-fox/vfox v0.8.0
-numtide/treefmt v2.3.1
+jesseduffield/lazydocker v0.24.3
+TomWright/dasel v3.1.4
+golangci/golangci-lint v2.7.2
+version-fox/vfox v0.9.2
+numtide/treefmt v2.4.0
 knqyf263/pet v1.0.1
-derailed/k9s v0.50.13
+derailed/k9s v0.50.16
 ynqa/jnv v0.6.1
-takaishi/tfclean v0.0.12
-Wilfred/difftastic 0.65.0
+takaishi/tfclean v0.0.15
+Wilfred/difftastic 0.67.0
 quantumsheep/sshs 4.7.2
+mercari/hcledit v0.0.17
