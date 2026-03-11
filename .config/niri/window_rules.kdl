@@ -1,0 +1,69 @@
+//******************************************************************************
+//                                 WINDOW RULES
+//******************************************************************************
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
+// Open some windows as floating by default.
+
+window-rule {
+    match app-id="firefox" title="^Picture-in-Picture$"
+    match app-id="firefox" title="^Incrustation vidéo$"
+    // match app-id="org.pulseaudio.pavucontrol"
+    match app-id="com.saivert.pwvucontrol"
+    match app-id="opensnitch_ui"
+    // match app-id="blueman-manager"
+    match app-id="mpv"
+
+    open-floating true
+}
+
+// Example: block out two password managers from screen capture.
+window-rule {
+    match app-id="org.keepassxc.KeePassXC"
+    match app-id="^org\\.gnome\\.World\\.Secrets$"
+
+    block-out-from "screen-capture"
+    // Use this instead if you want them visible on third-party screenshot tools.
+    // block-out-from "screencast"
+}
+
+// KeepassXC popup windows with focus
+window-rule {
+    match app-id="org.keepassxc.KeePassXC"
+    match is-floating=true
+
+    open-focused true
+}
+
+// Example: enable rounded corners for all windows.
+// (This example rule is commented out with a "/-" in front.)
+/-window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+window-rule {
+    match is-floating=false app-id="org.keepassxc.KeePassXC"
+    match is-floating=false app-id="com.mitchellh.ghostty"
+    match is-floating=false app-id="sakura"
+
+    open-on-workspace "sys"
+}
+
+window-rule {
+    match is-floating=false app-id="firefox"
+
+    open-on-workspace "int"
+}
+
+window-rule {
+    match is-floating=false app-id="Code"
+
+    open-on-workspace "dev"
+}
+
+window-rule {
+    match app-id="com.mitchellh.ghostty"
+    match app-id="sakura"
+
+    opacity 0.95
+}
