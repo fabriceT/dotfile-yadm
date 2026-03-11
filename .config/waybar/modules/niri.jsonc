@@ -1,0 +1,24 @@
+{
+    "niri/window": {
+        "format": "{}",
+        "rewrite": {
+            "(.*) — Mozilla Firefox": " - $1",
+            "micro (.*)": "µ $1",
+            "(.*) \\[(.*)\\] - KeePassXC": "󱓽  $1"
+        }
+    },
+
+    "niri/workspaces": {
+        //"current-only": true,
+	    "format": "{name} {icon}",
+    	"format-icons": {
+		    "int": "",
+		    "dev": "",
+		    "sys": "",
+
+		    // Icons by state
+		    "active": "",
+		    "default": ""
+	    }
+    }
+}
