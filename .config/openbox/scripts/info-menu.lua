@@ -143,15 +143,15 @@ end
 --[[
   *****f* info/dpms, info
   *  NAME
-  *    dmps - switch on or off screen blanking 
+  *    dmps - switch on or off screen blanking
   *  SYNOPSIS
   *    function dmps (flag)
   *  INPUTS
-  *    flags   - boolean. Set to true to turn on screen blanking. Set to off to turn if off 
+  *    flags   - boolean. Set to true to turn on screen blanking. Set to off to turn if off
   *  RESULT
-  *    returns nothing  
+  *    returns nothing
   *****
-]]  
+]]
 function dpms (flag)
 	local enabled = false
 	local f
@@ -219,4 +219,3 @@ getBatteryStatus ("/sys/devices/LNXSYSTM:00/device:00/PNP0C0A:00/power_supply/BA
 proxySettings (false)
 dpms ()
 print ("</openbox_pipe_menu>")
-

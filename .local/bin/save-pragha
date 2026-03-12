@@ -21,5 +21,3 @@ if (p) then
     os.execute("cp '" .. filename .. "' ~/Musiques/Save/")
     os.execute("pragha -n")
 end
-
-

@@ -35,7 +35,7 @@ function CamelCase(s)
     for i = 1,string.len(lower) do
         local c = string.sub(lower,i,i)
 
-        if c == '/' then 
+        if c == '/' then
             c = '-'
         end
 
@@ -77,9 +77,9 @@ if (p) then
 		print("Artist not found")
 		os.exit()
 	end
-	
+
 	print(artist, title)
-	
+
     local dest_path = string.format("%s/Artistes/%s", music_directory, artist)
     if not glib.exists(dest_path) then
         dest_path = string.format("%s/Artistes/%s", music_directory, CamelCase(artist))
@@ -96,5 +96,3 @@ if (p) then
         end
     end
 end
-
-

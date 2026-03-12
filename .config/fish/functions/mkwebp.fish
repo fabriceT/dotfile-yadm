@@ -1,6 +1,6 @@
 function mkwebp
     # On liste les répertoires en supprimant la 1ère ligne
-    # qui contient le '.' et qui nous fout dedant. 
+    # qui contient le '.' et qui nous fout dedant.
     for directory in (find . -type d | tail +2)
         echo "Change dir to $directory"
         cd $directory

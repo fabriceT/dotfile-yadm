@@ -3,7 +3,7 @@ scale=2
 /********************************
 
   bc program:	extensions.bc
-  author:	Steffen Brinkmann   
+  author:	Steffen Brinkmann
   e-mail:	s.z.s@web.de
   comments:	- published under the GPL
 		- contains functions of trigonometry, exponential functions,
@@ -40,7 +40,7 @@ scale=2
 6.-	acos(x)			:	returns arc cosine of x
 7.-	cot(x)			:	returns cotangent of x
 8.-	acot(x)			:	returns arc cotangent of x
-9.-	sec(x)			:	returns secans of x	
+9.-	sec(x)			:	returns secans of x
 10.-	cosec(x),csc(x)		:	returns cosecans of x
 11.-	asec(x)			:	returns arc secans of x
 12.-	acosec(x),ascs(x)	:	returns arc cosecans of x
@@ -56,7 +56,7 @@ scale=2
 22.-	cosech(x),csch(x)	:	returns cosecans hyperbolicus of x
 23.-	asech(x)		:	returns arc secans hyperbolicus of x
 24.-	acosech(x),acsch(x)	:	returns arc cosecans hyperbolicus of x
-	
+
 
 --II--	exponential functions:
 1.-	ln(x)			:	returns natural logarithm of x
@@ -172,7 +172,7 @@ define tanh(x)
 
 define coth(x)
 {
-	return((e(x)+e(-x))/e(x)-e(-x))	
+	return((e(x)+e(-x))/e(x)-e(-x))
 }
 
 define asinh(x)
@@ -200,7 +200,7 @@ define sech(x)
 	return(1/cosh(x))
 }
 
-define cosech(x) 
+define cosech(x)
 {
 	return(1/sinh(x))
 }
@@ -267,27 +267,27 @@ define mod(a,b){
 	scale=tmp_scale
 	if(a>=0) return(c)
 	if(c==0) return(0)
-        return(c+b)	
+        return(c+b)
 }
 
 define fac(n)
 {
 	auto tmp,i,factors
-	
-	if(abs(n)<=1) 
+
+	if(abs(n)<=1)
 	{
 	print abs(n),"\nnumber of factors: "
 	return(0)
 	}
 
-	if(abs(n)==2) 
+	if(abs(n)==2)
 	{
 	print 2,"\nnumber of factors: "
 	return(1)
 	}
 
 	tmp=n
-	
+
 	while(mod(tmp,2)==0)
 	{
 		print 2," "
@@ -298,7 +298,7 @@ define fac(n)
 	if(prime[0]==2)		/*primenumbers.bc is loaded*/
 	{
 		i=0
-		
+
 		while((prime[i]*prime[i])<=(n+1))
 		{
 			if(mod(tmp,prime[i])==0)
@@ -315,7 +315,7 @@ define fac(n)
 			}
 		}
 	}
-	
+
 	if(i>65535)
 	{
 		i=prime[65535]
@@ -336,7 +336,7 @@ define fac(n)
 		}
 	}
 
-	if(tmp!=1) 
+	if(tmp!=1)
 	{
 		factors+=1
 		print tmp," " /*BUG: prints zeros after factor*/
@@ -365,11 +365,11 @@ define factorial(n)
 
 define gcd(m,n){
 	auto a,b,c,tmp_scale
-	a=abs(m)         /* a=r[0] */ 
+	a=abs(m)         /* a=r[0] */
 	if(n==0) return(a)
-        b=abs(n)         /* b=r[1] */ 
+        b=abs(n)         /* b=r[1] */
 	/*tmp_scale=scale(sqrt(2))*/
-        /*c=a%b            /* c=r[2]=r[0] mod(r[1]) */ 
+        /*c=a%b            /* c=r[2]=r[0] mod(r[1]) */
 	c=mod(a,b)
         while(c>0){
 		a=b
@@ -379,7 +379,7 @@ define gcd(m,n){
         }
 	/*scale=tmp_scale*/
 	return(b)
-}   
+}
 
 define lcm(a,b){
 	auto g

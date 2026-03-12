@@ -1,5 +1,5 @@
 function rrestic
-    if [ $argv[1] = "--local" ] 
+    if [ $argv[1] = "--local" ]
         echo "--local"
         set ARGS $argv[2..-1]
         set -fx RESTIC_PASSWORD $(secret-tool lookup application restic)

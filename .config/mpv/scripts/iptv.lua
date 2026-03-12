@@ -168,7 +168,7 @@ for _,v in ipairs({',','^','$','(',')','%','.','[',']','*','+','-','?','`',"'","
   table.insert(chars,string.byte(v))
 end
 
-local keybinder = { 
+local keybinder = {
   remove = function(action)
     for i,_ in ipairs(keybinds[action]) do
       mp.remove_key_binding(action..tostring(i))
@@ -242,7 +242,7 @@ local playlister = {
       self.wndstart=1
       self.cursor=0
     end
-  
+
     msg=""
     i = self.wndstart
     local prefix
@@ -338,7 +338,7 @@ function add_bindings()
     mp.add_forced_key_binding(c, 'search'..v, typing(c),"repeatable")
   end
   mp.add_forced_key_binding('SPACE', 'search32', typing(' '),"repeatable")
-    
+
 --[[    mp.add_key_binding('а', 'search1000', typing('а'),"repeatable")
     mp.add_key_binding('с', 'search1001', typing('с'),"repeatable")]]
 
@@ -400,14 +400,14 @@ function in_array(array, value)
 end
 
 function mylower(s)
-  local res,n =  string.gsub(s,utf8_char,function (c) 
+  local res,n =  string.gsub(s,utf8_char,function (c)
                                     return utf8_uc_lc[c]
                                  end)
   return res
 end
 
 function myupper(s)
-  local res,n =  string.gsub(s,utf8_char,function (c) 
+  local res,n =  string.gsub(s,utf8_char,function (c)
                                     return utf8_lc_uc[c]
                                  end)
   return res
@@ -500,4 +500,3 @@ if mp.get_opt("iptv") then
   --~ mp.register_event("end-file", on_shutdown)
   keybinder.add("activate", activate)
 end
-

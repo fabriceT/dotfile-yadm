@@ -22,6 +22,7 @@ set -gx EDITOR micro
 set -gx GOPATH ~/go
 set -gx CHARM_HOST 130.61.241.116
 set -gx AQUA_GLOBAL_CONFIG $HOME/.config/aquaproj-aqua/aqua.yaml
+set -gx LIBVA_DRIVER_NAME i965
 
 # Fix act https://github.com/nektos/act/issues/303
 set -gx DOCKER_HOST unix://$XDG_RUNTIME_DIR/podman/podman.sock

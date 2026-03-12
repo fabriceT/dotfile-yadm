@@ -21,5 +21,3 @@ if (p) then
     os.execute("gio trash \"" .. filename .. "\"")
     os.execute("pragha -n")
 end
-
-

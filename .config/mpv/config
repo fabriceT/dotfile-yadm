@@ -1,3 +1,15 @@
 # Write your default config options here!
+ytdl-format="(best[height<=768])"
 
+hwdec=auto
 
+##### Intel
+# Utiliser VA‑API comme backend matériel
+# hwec=vaapi
+
+# (Optionnel) Forcer le décodage uniquement pour les codecs supportés
+hwdec-codecs=h264,hevc,vp9,av1
+
+# Désactiver explicitement VDPAU au cas où il serait forcé ailleurs
+#vdpaudevice=
+######

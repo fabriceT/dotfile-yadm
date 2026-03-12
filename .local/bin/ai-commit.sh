@@ -27,8 +27,8 @@ Examples:
 diff=$(${GIT} diff --cached)
 
 if [[ -z "$diff" ]]; then
-  echo "[ERROR] No changes found to generate a commit message."
-  exit 1
+        echo "[ERROR] No changes found to generate a commit message."
+        exit 1
 fi
 
 # Step 2: Truncate each file's diff

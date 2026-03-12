@@ -158,4 +158,3 @@ else
 	end
 	print ('</openbox_pipe_menu>')
 end
-

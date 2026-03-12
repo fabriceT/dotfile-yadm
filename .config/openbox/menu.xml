@@ -77,7 +77,7 @@
       </action>
     </item>
   </menu>
-  
+
   <menu id="root-menu" label="Openbox 3">
     <separator label="Programmes" />
     <menu id="applications-menu" />

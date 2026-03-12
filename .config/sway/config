@@ -151,7 +151,7 @@ include ~/config/sway/applications
 
 #
 # Audio
-# 
+#
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume $(pacmd list-sinks |awk '/* index:/{print $3}') -5%
@@ -171,7 +171,7 @@ bar {
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
     status_command while date +'⏲  %Y-%m-%d %l:%M %p'; do sleep 30s; done
-   
+
     colors {
         statusline #ffffff
         background #323232

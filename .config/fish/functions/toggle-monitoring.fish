@@ -6,7 +6,7 @@ function toggle-monitoring
         set sys_command "start"
         echo "Starting prometheus"
     end
-    
+
     sudo systemctl $sys_command prometheus prometheus-{node,sql,blackbox}-exporter grafana
 
 end

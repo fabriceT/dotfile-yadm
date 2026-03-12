@@ -1,6 +1,6 @@
 function tfp -d "Run terraform/tofu plan, and init if needed"
     set -l cmd terraform
-    
+
     if test $(count argv)
         switch "$argv"
             case "-h"

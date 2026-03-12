@@ -10,5 +10,3 @@ TargetToolbar=true
 Exec=audacious --enqueue %F
 TryExec=audacious
 MimeTypes=audio/*;inode/directory;
-
-
