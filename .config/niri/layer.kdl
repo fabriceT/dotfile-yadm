@@ -1,0 +1,28 @@
+//******************************************************************************
+//                                 LAYER RULES
+//******************************************************************************
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Layer-Rules
+// Make fuzzel semitransparent.
+
+layer-rule {
+    match namespace="^launcher$"
+    opacity 0.85
+    shadow {
+        on
+        softness 10
+        spread 5
+        offset x=0 y=5
+        draw-behind-window true
+        color "#00000064"
+    }
+}
+
+layer-rule {
+    match namespace="waybar"
+    match at-startup=true
+    // Properties that apply continuously.
+    opacity 0.9
+    block-out-from "screencast"
+    geometry-corner-radius 12
+    place-within-backdrop true
+}

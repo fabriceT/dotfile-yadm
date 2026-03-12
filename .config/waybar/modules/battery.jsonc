@@ -1,0 +1,29 @@
+{
+    "battery": {
+        "full-at": 97,
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": {
+            "unplugged": [
+                "󰂐"
+            ],
+            "discharging": [
+                "󰂍"
+            ],
+            "not charging": [
+                "󰂄"
+            ],
+            "plugged": [
+                "󰂄"
+            ],
+            "default": [
+                "󰂄"
+            ]
+        },
+        "format-alt": "{time} {capacity} {power} Wh"
+    }
+}
