@@ -1,0 +1,14 @@
+{
+    "colorscheme": "monokai-dark",
+    "statusformatl": " $(filename) $(modified)($(line),$(col)) $(status.paste) | ft:$(opt:filetype) | $(opt:fileformat) | $(opt:encoding) $(status.branch)",
+    "softwrap": true,
+    "colorcolumn": 80,
+    "diffgutter": true,
+
+	"lsp.server": "python=pyls,go=gopls,rust=rls,vala=vala-language-server,lua=lua-language-server",
+	"lsp.formatOnSave": true,
+	"lsp.ignoreMessages": "LS message1 to ignore|LS message 2 to ignore|...",
+	"lsp.tabcompletion": true,
+	"lsp.ignoreTriggerCharacters": "completion,signature",
+	"lsp.autocompleteDetails": false,
+}

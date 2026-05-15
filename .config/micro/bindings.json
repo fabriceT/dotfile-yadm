@@ -1,0 +1,19 @@
+{
+    "Alt-/": "lua:comment.comment",
+    "Alt-a": "lua:snippets.Accept",
+    "Alt-d": "lua:snippets.Cancel",
+    "Alt-f": "command:format",
+    "Alt-k": "command:hover",
+    "Alt-r": "command:references",
+    "Alt-s": "lua:snippets.Insert",
+    "Alt-w": "lua:snippets.Next",
+    "Ctrl-:": "lua:comment.comment",
+    "Ctrl-L": "lua:manipulator.upper",
+    "Ctrl-n": "lua:initlua.decode_sops",
+    "Ctrl-r": "lua:initlua.gorun",
+    "Ctrl-x": "Quit",
+    "CtrlSpace": "command:lspcompletion",
+    "CtrlUnderscore": "lua:comment.comment",
+    "F4": "command:jumptag",
+    "F6": "command-edit:gorename"
+}
