@@ -257,6 +257,7 @@ fallback_channel = "files"
   "ollama stop",
   "ollama cp",
   "ollama rm",
+  "aider"
 ]
 
 [shell_integration.keybindings]
