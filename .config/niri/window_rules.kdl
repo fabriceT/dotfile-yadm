@@ -51,12 +51,16 @@ window-rule {
 
 window-rule {
     match is-floating=false app-id="firefox"
+    match is-floating=false app-id="librewolf"
+    match is-floating=false app-id="org.mozilla.Thunderbird"
+    match is-floating=false app-id="eu.betterbird.Betterbird"
 
     open-on-workspace "int"
 }
 
 window-rule {
     match is-floating=false app-id="Code"
+    match is-floating=false app-id="code"
 
     open-on-workspace "dev"
 }

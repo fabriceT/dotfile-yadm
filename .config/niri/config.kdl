@@ -6,7 +6,7 @@
 
 spawn-at-startup "waybar"
 spawn-at-startup "mako"
-spawn-at-startup "wlsunset" "-L" "6.8" "-l" "47.4"
+spawn-at-startup "wlsunset" "-L" "6.8" "-l" "47.4" "-T" "6500" "-t" "3500"
 //spawn-at-startup "swaybg" "-m" "fit" "-i" "~/Images/fatman1.jpg"
 //spawn-sh-at-startup "swaybg -m fit -i ~/Images/fatman1.jpg"
 spawn-at-startup "swayidle" "-w" "timeout" "601" "niri msg action power-off-monitors" "timeout" "600" "swaylock -f" "before-sleep" "swaylock -f"
@@ -46,3 +46,4 @@ include "window_rules.kdl"
 include "animations.kdl"
 include "overview.kdl"
 include "binds.kdl"
+include "recent_windows.kdl"
