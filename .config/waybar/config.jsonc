@@ -11,7 +11,7 @@
         "pulseaudio",
         "network",
         "cpu",
-        //"idle_inhibitor",
+        "idle_inhibitor",
         "memory",
         "battery",
         "clock",
@@ -21,7 +21,7 @@
 
     "include": [
         "~/.config/waybar/modules/battery.jsonc",
-        // "~/.config/waybar/modules/idle_inhibitor.jsonc",
+        "~/.config/waybar/modules/idle_inhibitor.jsonc",
         "~/.config/waybar/modules/clock.jsonc",
         "~/.config/waybar/modules/cpu.jsonc",
         "~/.config/waybar/modules/pulseaudio.jsonc",
