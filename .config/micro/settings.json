@@ -5,10 +5,10 @@
     "colorcolumn": 80,
     "diffgutter": true,
 
-	"lsp.server": "python=pyls,go=gopls,rust=rls,vala=vala-language-server,lua=lua-language-server",
-	"lsp.formatOnSave": true,
-	"lsp.ignoreMessages": "LS message1 to ignore|LS message 2 to ignore|...",
-	"lsp.tabcompletion": true,
-	"lsp.ignoreTriggerCharacters": "completion,signature",
-	"lsp.autocompleteDetails": false,
+    "lsp.server": "python=ty,go=gopls,rust=rls,vala=vala-language-server,lua=lua-language-server,just=just-lsp,systemd=systemd-lsp",
+    "lsp.formatOnSave": true,
+    "lsp.ignoreMessages": "LS message1 to ignore|LS message 2 to ignore|...",
+    "lsp.tabcompletion": true,
+    "lsp.ignoreTriggerCharacters": "completion,signature",
+    "lsp.autocompleteDetails": false
 }
