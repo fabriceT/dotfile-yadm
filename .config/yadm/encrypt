@@ -4,3 +4,5 @@
 .hgrc
 .imapfilter/config.lua
 .ssh/config
+.local/share/mkcert/rootCA.pem
+.local/share/mkcert/rootCA-key.pem
